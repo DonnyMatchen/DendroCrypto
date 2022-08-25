@@ -1,49 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b24a71ca-022e-4d4f-81a2-a17d43395b76" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/fasterxml_jackson_core.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DendroCrypto.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WALLET ADDRESSES.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documents/AES.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documents/Modulus_for_use with_generator_of_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documents/Tabs.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/DendroCrypto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/AesEH.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/EncryptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/HashHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/KeysNotSetException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/ShaHH.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/MainGui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/customswing/DendroFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/customswing/components/HexField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/customswing/components/IOPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/ExportableToJson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonBool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonDecimal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonFormattingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonNull.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/resources/aes.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/resources/ui.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/resources/unifont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/resources/verdana.ttf" afterDir="false" />
-    </list>
+    <list default="true" id="b24a71ca-022e-4d4f-81a2-a17d43395b76" name="Changes" comment="files missed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,6 +18,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -85,7 +48,6 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/home/donny/Sync/Personal/dv/LIBRARIES/DendroFactor-v1.0.0.jar",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -116,6 +78,21 @@
       <option name="presentableId" value="Default" />
       <updated>1661083047177</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1661419108238</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661419108239</updated>
+    </task>
+    <task id="LOCAL-00002" summary="files missed">
+      <created>1661419440294</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661419440294</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,5 +105,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="files missed" />
+    <option name="LAST_COMMIT_MESSAGE" value="files missed" />
   </component>
 </project>
