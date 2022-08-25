@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b24a71ca-022e-4d4f-81a2-a17d43395b76" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/fasterxml_jackson_core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DendroCrypto.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WALLET ADDRESSES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/AES.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/Modulus_for_use with_generator_of_2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/Tabs.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/DendroCrypto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/AesEH.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/EncryptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/HashHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/KeysNotSetException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/ShaHH.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/MainGui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/customswing/DendroFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/customswing/components/HexField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/customswing/components/IOPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/ExportableToJson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonBool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonDecimal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonFormattingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonNull.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/resources/aes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/resources/ui.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/resources/unifont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/resources/verdana.ttf" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2DfH6WdFiLAuwkn4yb8nFLUvsTY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/donny/Sync/Personal/dv/LIBRARIES/DendroFactor-v1.0.0.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Docs" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DendroCrypto" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.donny.dendrocrypto.DendroCrypto" />
+      <module name="DendroCrypto" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b24a71ca-022e-4d4f-81a2-a17d43395b76" name="Changes" comment="" />
+      <created>1661083047177</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661083047177</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

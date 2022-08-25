@@ -1,0 +1,19 @@
+*For ERC20/TRC10/TRC20 tokens, ones traded on binance.us or kraken.com are vastly preferred.*
+
+### Addresses
+* **BTC**: `bc1qdyrlclxeh2ex5ptsc48ccswwzg69pa2rd0ux2t`
+* **ETH/MATIC/BNB**: `0xDAF31E1b0dEE541CD85EAadbD872efFBFe108ed0`
+* **LTC**: `MDgsfD2e8NrDKekVSc3dFzkK1AJkaMa7LT`
+* **XMR**: `88VYLsxgKxc7Z9cN7gV7rVMabzVMQgsFALwjirgR4kEtTSd8wh7LUKbQdwbhPYDcNyR5fG1CfFc3TXUZZCVXQvW493kYd4V`
+* **DOT**: `16DejNvrsiw4rKSRqddy9RvdSyRT3HhXc2cJT6n7ErmCjmGk`
+* **DASH**: `XnTysQkpjAe7ZZDQTWQf1EBRaZuPC2sWnD`
+* **ZEC**: `t1ZXW6ycx2btuBqz3AMHK8ZpXVTZEaCPYRF`
+* **TRX**: `TJC7QZZFwe7ZeAMATVDKch1pSn5FwtVcZX`
+* **SOL**: `H3jSBNHPE2xnxSczL86c9WmoeVbj71dQRsvpa9rKgKyy`
+* **BCH**: `qrmltgxmsru4dqqpztxtlsavgmktwnygnszwl0tf9r`
+* **ETC**: `0xEf884C792F3809d924D79B07C65A71CBC7021BC5`
+* **XTZ**: `tz1Y2Cd4mDgHhMbGY9txXtLC39qfu2byEHFo`
+* **BTG**: `AcjU2RLLTeVDp6SvvT245ojg7dKbLfvtmH`
+* **ALGO**: `QSTAUTSYLATXINARAXTDSWLTFVXM6N2T2ZJYHDIWAWJ3ADFFRNTA5HZN44`
+* **XLM**: `GBDNJIQEAUCZ5DIEMBAKTFOD7IQIWOX2CJK2ICNLD2XWQI5WRYG76D67`
+* **CELO**: `0xA745a1546A8f91A71ec155E361619884fE614DC2`

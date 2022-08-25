@@ -1,0 +1,34 @@
+[
+  {
+    "name": "CBC",
+    "flag": "IP"
+  },
+  {
+    "name": "CFB",
+    "flag": "INP"
+  },
+  {
+    "name": "OFB",
+    "flag": "INP"
+  },
+  {
+    "name": "CTR",
+    "flag": "IN"
+  },
+  {
+    "name": "GCM",
+    "flag": "N"
+  },
+  {
+    "name": "KW",
+    "flag": "NP"
+  },
+  {
+    "name": "KWP",
+    "flag": "N"
+  },
+  {
+    "name": "ECB",
+    "flag": "NP"
+  }
+]

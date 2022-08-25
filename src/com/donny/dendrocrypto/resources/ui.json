@@ -1,0 +1,3692 @@
+[
+  {
+    "type": "Windows",
+    "contents": [
+      {
+        "item": "ColorChooser",
+        "contents": [
+          {
+            "key": "ColorChooser.background",
+            "class": "class java.awt.Color",
+            "value": "REGULAR"
+          },
+          {
+            "key": "ColorChooser.font",
+            "class": "class java.awt.Font",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "ColorChooser.foreground",
+            "class": "class java.awt.Color",
+            "value": "TEXT"
+          },
+          {
+            "key": "ColorChooser.swatchesDefaultRecentColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ColorChooser.swatchesRecentSwatchSize",
+            "class": "class java.awt.Dimension",
+            "value": null
+          },
+          {
+            "key": "ColorChooser.swatchesSwatchSize",
+            "class": "class java.awt.Dimension",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "Desktop",
+        "contents": [
+          {
+            "key": "Desktop.ancestorInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "Desktop.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "REGULAR"
+          },
+          {
+            "key": "Desktop.minOnScreenInsets",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "DesktopIcon",
+        "contents": [
+          {
+            "key": "DesktopIcon.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "DesktopIcon.border",
+            "class": "class javax.swing.plaf.BorderUIResource$CompoundBorderUIResource",
+            "value": "PANEL_BORDER"
+          },
+          {
+            "key": "DesktopIcon.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": null
+          },
+          {
+            "key": "DesktopIcon.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "DesktopIcon.width",
+            "class": "class java.lang.Integer",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "FileChooser",
+        "contents": [
+          {
+            "key": "FileChooser.ancestorInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "FileChooser.detailsViewIcon",
+            "class": "class javax.swing.plaf.metal.MetalIconFactory$FileChooserDetailViewIcon",
+            "value": null
+          },
+          {
+            "key": "FileChooser.homeFolderIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "FileChooser.listViewIcon",
+            "class": "class javax.swing.plaf.metal.MetalIconFactory$FileChooserListViewIcon",
+            "value": null
+          },
+          {
+            "key": "FileChooser.newFolderIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "FileChooser.readOnly",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "FileChooser.upFolderIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "FileChooser.useSystemExtensionHiding",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "FileChooser.usesSingleFilePane",
+            "class": "class java.lang.Boolean",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "InternalFrame",
+        "contents": [
+          {
+            "key": "InternalFrame.activeTitleBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.activeTitleForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.activeTitleGradient",
+            "class": "class java.util.Arrays$ArrayList",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.border",
+            "class": "class javax.swing.plaf.metal.MetalBorders$InternalFrameBorder",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.borderColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.borderDarkShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.borderHighlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.borderLight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.borderShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.closeIcon",
+            "class": "class javax.swing.plaf.metal.OceanTheme$IFIcon",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.closeSound",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.icon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.iconifyIcon",
+            "class": "class javax.swing.plaf.metal.OceanTheme$IFIcon",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.inactiveTitleBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.inactiveTitleForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.maximizeIcon",
+            "class": "class javax.swing.plaf.metal.OceanTheme$IFIcon",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.maximizeSound",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.minimizeIcon",
+            "class": "class javax.swing.plaf.metal.OceanTheme$IFIcon",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.minimizeSound",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.optionDialogBorder",
+            "class": "class javax.swing.plaf.metal.MetalBorders$OptionDialogBorder",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.paletteBorder",
+            "class": "class javax.swing.plaf.metal.MetalBorders$PaletteBorder",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.paletteCloseIcon",
+            "class": "class javax.swing.plaf.metal.OceanTheme$IFIcon",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.paletteTitleHeight",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.restoreDownSound",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.restoreUpSound",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "InternalFrame.titleFont",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": null
+          },
+          {
+            "key": "InternalFrameTitlePane.closeButtonOpacity",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "InternalFrameTitlePane.iconifyButtonOpacity",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "InternalFrameTitlePane.maximizeButtonOpacity",
+            "class": "class java.lang.Boolean",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "OptionPane",
+        "contents": [
+          {
+            "key": "OptionPane.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.border",
+            "class": "class javax.swing.plaf.BorderUIResource$EmptyBorderUIResource",
+            "value": "PANEL_BORDER"
+          },
+          {
+            "key": "OptionPane.buttonAreaBorder",
+            "class": "class javax.swing.plaf.BorderUIResource$EmptyBorderUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.buttonClickThreshhold",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "OptionPane.errorDialog.border.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.errorDialog.titlePane.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.errorDialog.titlePane.foreground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.errorDialog.titlePane.shadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.errorIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.errorSound",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "OptionPane.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.informationIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.informationSound",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "OptionPane.messageAreaBorder",
+            "class": "class javax.swing.plaf.BorderUIResource$EmptyBorderUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.messageForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.minimumSize",
+            "class": "class javax.swing.plaf.DimensionUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.questionDialog.border.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.questionDialog.titlePane.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.questionDialog.titlePane.foreground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.questionDialog.titlePane.shadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.questionIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.questionSound",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "OptionPane.warningDialog.border.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.warningDialog.titlePane.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.warningDialog.titlePane.foreground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.warningDialog.titlePane.shadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.warningIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "OptionPane.warningSound",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "OptionPane.windowBindings",
+            "class": "class [Ljava.lang.Object;",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "Panel",
+        "contents": [
+          {
+            "key": "Panel.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "REGULAR"
+          },
+          {
+            "key": "Panel.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "Panel.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "Panel.border",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "PANEL_BORDER"
+          }
+        ]
+      },
+      {
+        "item": "PopupMenu",
+        "contents": [
+          {
+            "key": "PopupMenu.actionMap",
+            "class": "class javax.swing.plaf.basic.LazyActionMap",
+            "value": null
+          },
+          {
+            "key": "PopupMenu.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "REGULAR"
+          },
+          {
+            "key": "PopupMenu.border",
+            "class": "class javax.swing.plaf.metal.MetalBorders$PopupMenuBorder",
+            "value": "PANEL_BORDER"
+          },
+          {
+            "key": "PopupMenu.consumeEventOnClose",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "PopupMenu.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "PopupMenu.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "PopupMenu.popupSound",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "PopupMenu.selectedWindowInputMapBindings",
+            "class": "class [Ljava.lang.Object;",
+            "value": null
+          },
+          {
+            "key": "PopupMenu.selectedWindowInputMapBindings.RightToLeft",
+            "class": "class [Ljava.lang.Object;",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "RootPane",
+        "contents": [
+          {
+            "key": "RootPane.actionMap",
+            "class": "class javax.swing.plaf.basic.LazyActionMap",
+            "value": null
+          },
+          {
+            "key": "RootPane.ancestorInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "RootPane.colorChooserDialogBorder",
+            "class": "class javax.swing.plaf.metal.MetalBorders$QuestionDialogBorder",
+            "value": null
+          },
+          {
+            "key": "RootPane.defaultButtonWindowKeyBindings",
+            "class": "class [Ljava.lang.Object;",
+            "value": null
+          },
+          {
+            "key": "RootPane.errorDialogBorder",
+            "class": "class javax.swing.plaf.metal.MetalBorders$ErrorDialogBorder",
+            "value": null
+          },
+          {
+            "key": "RootPane.fileChooserDialogBorder",
+            "class": "class javax.swing.plaf.metal.MetalBorders$QuestionDialogBorder",
+            "value": null
+          },
+          {
+            "key": "RootPane.frameBorder",
+            "class": "class javax.swing.plaf.metal.MetalBorders$FrameBorder",
+            "value": null
+          },
+          {
+            "key": "RootPane.informationDialogBorder",
+            "class": "class javax.swing.plaf.metal.MetalBorders$DialogBorder",
+            "value": null
+          },
+          {
+            "key": "RootPane.plainDialogBorder",
+            "class": "class javax.swing.plaf.metal.MetalBorders$DialogBorder",
+            "value": null
+          },
+          {
+            "key": "RootPane.questionDialogBorder",
+            "class": "class javax.swing.plaf.metal.MetalBorders$QuestionDialogBorder",
+            "value": null
+          },
+          {
+            "key": "RootPane.warningDialogBorder",
+            "class": "class javax.swing.plaf.metal.MetalBorders$WarningDialogBorder",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "SplitPane",
+        "contents": [
+          {
+            "key": "SplitPane.ancestorInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "SplitPane.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "REGULAR"
+          },
+          {
+            "key": "SplitPane.border",
+            "class": "class javax.swing.plaf.basic.BasicBorders$SplitPaneBorder",
+            "value": "PANEL_BORDER"
+          },
+          {
+            "key": "SplitPane.centerOneTouchButtons",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "SplitPane.darkShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "SplitPane.dividerFocusColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "REGULAR"
+          },
+          {
+            "key": "SplitPane.dividerSize",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "SplitPane.highlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "SplitPane.oneTouchButtonsOpaque",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "SplitPane.shadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "SplitPaneDivider.border",
+            "class": "class javax.swing.plaf.basic.BasicBorders$SplitPaneDividerBorder",
+            "value": null
+          },
+          {
+            "key": "SplitPaneDivider.draggingColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "TabbedPane",
+        "contents": [
+          {
+            "key": "TabbedPane.ancestorInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "BACKDROP"
+          },
+          {
+            "key": "TabbedPane.borderHightlightColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.contentAreaColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "REGULAR"
+          },
+          {
+            "key": "TabbedPane.contentBorderInsets",
+            "class": "class java.awt.Insets",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.contentOpaque",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.darkShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.focus",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.focusInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "TabbedPane.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "TabbedPane.highlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.labelShift",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.light",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.selectHighlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.selected",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "SELECTION"
+          },
+          {
+            "key": "TabbedPane.selectedLabelShift",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.selectedTabPadInsets",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.selectionFollowsFocus",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.shadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.tabAreaBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "BACKDROP"
+          },
+          {
+            "key": "TabbedPane.tabAreaInsets",
+            "class": "class java.awt.Insets",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.tabInsets",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.tabRunOverlay",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.tabsOpaque",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.tabsOverlapBorder",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.textIconGap",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "TabbedPane.unselectedBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "TitledBorder",
+        "contents": [
+          {
+            "key": "TitledBorder.border",
+            "class": "class javax.swing.plaf.BorderUIResource$LineBorderUIResource",
+            "value": null
+          },
+          {
+            "key": "TitledBorder.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "TitledBorder.titleColor",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          }
+        ]
+      },
+      {
+        "item": "ToolTip",
+        "contents": [
+          {
+            "key": "ToolTip.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "REGULAR"
+          },
+          {
+            "key": "ToolTip.backgroundInactive",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToolTip.border",
+            "class": "class javax.swing.plaf.BorderUIResource$LineBorderUIResource",
+            "value": "PANEL_BORDER"
+          },
+          {
+            "key": "ToolTip.borderInactive",
+            "class": "class javax.swing.plaf.BorderUIResource$LineBorderUIResource",
+            "value": null
+          },
+          {
+            "key": "ToolTip.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "ToolTip.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "ToolTip.foregroundInactive",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToolTip.hideAccelerator",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "ToolTipManager.enableToolTipMode",
+            "class": "class java.lang.String",
+            "value": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Menus",
+    "contents": [
+      {
+        "item": "CheckBoxMenuItem",
+        "contents": [
+          {
+            "key": "CheckBoxMenuItem.acceleratorFont",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": null
+          },
+          {
+            "key": "CheckBoxMenuItem.acceleratorForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "CheckBoxMenuItem.acceleratorSelectionForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "CheckBoxMenuItem.arrowIcon",
+            "class": "class javax.swing.plaf.metal.MetalIconFactory$MenuItemArrowIcon",
+            "value": null
+          },
+          {
+            "key": "CheckBoxMenuItem.background",
+            "class": "class java.awt.Color",
+            "value": "BACKDROP"
+          },
+          {
+            "key": "CheckBoxMenuItem.border",
+            "class": "class javax.swing.border.BevelBorder",
+            "value": "PANEL_BORDER"
+          },
+          {
+            "key": "CheckBoxMenuItem.borderPainted",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "CheckBoxMenuItem.checkIcon",
+            "class": "class javax.swing.plaf.metal.MetalIconFactory$CheckBoxMenuItemIcon",
+            "value": null
+          },
+          {
+            "key": "CheckBoxMenuItem.commandSound",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "CheckBoxMenuItem.disabledForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "CheckBoxMenuItem.font",
+            "class": "class java.awt.Font",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "CheckBoxMenuItem.foreground",
+            "class": "class java.awt.Color",
+            "value": "TEXT"
+          },
+          {
+            "key": "CheckBoxMenuItem.gradient",
+            "class": "class java.util.Arrays$ArrayList",
+            "value": null
+          },
+          {
+            "key": "CheckBoxMenuItem.margin",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "CheckBoxMenuItem.selectionBackground",
+            "class": "class java.awt.Color",
+            "value": "SELECTION"
+          },
+          {
+            "key": "CheckBoxMenuItem.selectionForeground",
+            "class": "class java.awt.Color",
+            "value": "CARET"
+          }
+        ]
+      },
+      {
+        "item": "Menu",
+        "contents": [
+          {
+            "key": "Menu.acceleratorFont",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": null
+          },
+          {
+            "key": "Menu.acceleratorForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Menu.acceleratorSelectionForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Menu.actionMap",
+            "class": "class javax.swing.plaf.basic.LazyActionMap",
+            "value": null
+          },
+          {
+            "key": "Menu.arrowIcon",
+            "class": "class javax.swing.plaf.metal.MetalIconFactory$MenuArrowIcon",
+            "value": null
+          },
+          {
+            "key": "Menu.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "BACKDROP"
+          },
+          {
+            "key": "Menu.border",
+            "class": "class javax.swing.plaf.metal.MetalBorders$MenuItemBorder",
+            "value": "PANEL_BORDER"
+          },
+          {
+            "key": "Menu.borderPainted",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "Menu.cancelMode",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "Menu.crossMenuMnemonic",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "Menu.disabledForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Menu.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "Menu.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "Menu.margin",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "Menu.menuPopupOffsetX",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "Menu.menuPopupOffsetY",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "Menu.opaque",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "Menu.preserveTopLevelSelection",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "Menu.selectionBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "SELECTION"
+          },
+          {
+            "key": "Menu.selectionForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "CARET"
+          },
+          {
+            "key": "Menu.shortcutKeys",
+            "class": "class [I",
+            "value": null
+          },
+          {
+            "key": "Menu.submenuPopupOffsetX",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "Menu.submenuPopupOffsetY",
+            "class": "class java.lang.Integer",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "MenuBar",
+        "contents": [
+          {
+            "key": "MenuBar.actionMap",
+            "class": "class javax.swing.plaf.basic.LazyActionMap",
+            "value": null
+          },
+          {
+            "key": "MenuBar.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "BACKDROP"
+          },
+          {
+            "key": "MenuBar.border",
+            "class": "class javax.swing.plaf.metal.MetalBorders$MenuBarBorder",
+            "value": null
+          },
+          {
+            "key": "MenuBar.borderColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "MenuBar.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "MenuBar.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "MenuBar.gradient",
+            "class": "class java.util.Arrays$ArrayList",
+            "value": null
+          },
+          {
+            "key": "MenuBar.highlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "MenuBar.shadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "MenuBar.windowBindings",
+            "class": "class [Ljava.lang.Object;",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "MenuItem",
+        "contents": [
+          {
+            "key": "MenuItem.acceleratorDelimiter",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "MenuItem.acceleratorFont",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": null
+          },
+          {
+            "key": "MenuItem.acceleratorForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "MenuItem.acceleratorSelectionForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "MenuItem.actionMap",
+            "class": "class javax.swing.plaf.basic.LazyActionMap",
+            "value": null
+          },
+          {
+            "key": "MenuItem.arrowIcon",
+            "class": "class javax.swing.plaf.metal.MetalIconFactory$MenuItemArrowIcon",
+            "value": null
+          },
+          {
+            "key": "MenuItem.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "BACKDROP"
+          },
+          {
+            "key": "MenuItem.border",
+            "class": "class javax.swing.plaf.metal.MetalBorders$MenuItemBorder",
+            "value": null
+          },
+          {
+            "key": "MenuItem.borderPainted",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "MenuItem.commandSound",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "MenuItem.disabledForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "MenuItem.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "MenuItem.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "MenuItem.margin",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "MenuItem.selectionBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "SELECTION"
+          },
+          {
+            "key": "MenuItem.selectionForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "CARET"
+          }
+        ]
+      },
+      {
+        "item": "RadioButtonMenuItem",
+        "contents": [
+          {
+            "key": "RadioButtonMenuItem.acceleratorFont",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": null
+          },
+          {
+            "key": "RadioButtonMenuItem.acceleratorForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "RadioButtonMenuItem.acceleratorSelectionForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "RadioButtonMenuItem.arrowIcon",
+            "class": "class javax.swing.plaf.metal.MetalIconFactory$MenuItemArrowIcon",
+            "value": null
+          },
+          {
+            "key": "RadioButtonMenuItem.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "BACKDROP"
+          },
+          {
+            "key": "RadioButtonMenuItem.border",
+            "class": "class javax.swing.plaf.metal.MetalBorders$MenuItemBorder",
+            "value": "PANEL_BORDER"
+          },
+          {
+            "key": "RadioButtonMenuItem.borderPainted",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "RadioButtonMenuItem.checkIcon",
+            "class": "class javax.swing.plaf.metal.MetalIconFactory$RadioButtonMenuItemIcon",
+            "value": null
+          },
+          {
+            "key": "RadioButtonMenuItem.commandSound",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "RadioButtonMenuItem.disabledForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "RadioButtonMenuItem.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "RadioButtonMenuItem.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "RadioButtonMenuItem.gradient",
+            "class": "class java.util.Arrays$ArrayList",
+            "value": null
+          },
+          {
+            "key": "RadioButtonMenuItem.margin",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "RadioButtonMenuItem.selectionBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "SELECTION"
+          },
+          {
+            "key": "RadioButtonMenuItem.selectionForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "CARET"
+          }
+        ]
+      },
+      {
+        "item": "Separator",
+        "contents": [
+          {
+            "key": "Separator.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "BACKDROP"
+          },
+          {
+            "key": "Separator.foreground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CONTENT"
+          },
+          {
+            "key": "Separator.highlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Separator.shadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "ToolBar",
+        "contents": [
+          {
+            "key": "ToolBar.ancestorInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "ToolBar.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "BACKDROP"
+          },
+          {
+            "key": "ToolBar.border",
+            "class": "class javax.swing.plaf.metal.MetalBorders$ToolBarBorder",
+            "value": "PANEL_BORDER"
+          },
+          {
+            "key": "ToolBar.borderColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToolBar.darkShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToolBar.dockingBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToolBar.dockingForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToolBar.floatingBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToolBar.floatingForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToolBar.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "ToolBar.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "ToolBar.highlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToolBar.isRollover",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "ToolBar.light",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToolBar.nonrolloverBorder",
+            "class": "class javax.swing.border.CompoundBorder",
+            "value": null
+          },
+          {
+            "key": "ToolBar.rolloverBorder",
+            "class": "class javax.swing.border.CompoundBorder",
+            "value": null
+          },
+          {
+            "key": "ToolBar.separatorSize",
+            "class": "class javax.swing.plaf.DimensionUIResource",
+            "value": null
+          },
+          {
+            "key": "ToolBar.shadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Elements",
+    "contents": [
+      {
+        "item": "Button",
+        "contents": [
+          {
+            "key": "Button.actionMap",
+            "class": "class javax.swing.plaf.basic.LazyActionMap",
+            "value": null
+          },
+          {
+            "key": "Button.background",
+            "class": "class java.awt.Color",
+            "value": "REGULAR"
+          },
+          {
+            "key": "Button.border",
+            "class": "class javax.swing.border.BevelBorder",
+            "value": null
+          },
+          {
+            "key": "Button.darkShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Button.defaultButtonFollowsFocus",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "Button.disabledText",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Button.disabledToolBarBorderBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Button.focus",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Button.focusInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "Button.font",
+            "class": "class java.awt.Font",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "Button.foreground",
+            "class": "class java.awt.Color",
+            "value": "TEXT"
+          },
+          {
+            "key": "Button.gradient",
+            "class": "class java.util.Arrays$ArrayList",
+            "value": null
+          },
+          {
+            "key": "Button.highlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Button.light",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Button.margin",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "Button.rollover",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "Button.rolloverIconType",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "Button.select",
+            "class": "class java.awt.Color",
+            "value": "SELECTION"
+          },
+          {
+            "key": "Button.shadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Button.textIconGap",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "Button.textShiftOffset",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "Button.toolBarBorderBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "CheckBox",
+        "contents": [
+          {
+            "key": "CheckBox.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "REGULAR"
+          },
+          {
+            "key": "CheckBox.border",
+            "class": "class javax.swing.border.BevelBorder",
+            "value": null
+          },
+          {
+            "key": "CheckBox.disabledText",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "CheckBox.focus",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "CheckBox.focusInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "CheckBox.font",
+            "class": "class java.awt.Font",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "CheckBox.foreground",
+            "class": "class java.awt.Color",
+            "value": "TEXT"
+          },
+          {
+            "key": "CheckBox.gradient",
+            "class": "class java.util.Arrays$ArrayList",
+            "value": null
+          },
+          {
+            "key": "CheckBox.icon",
+            "class": "class javax.swing.plaf.metal.MetalIconFactory$CheckBoxIcon",
+            "value": null
+          },
+          {
+            "key": "CheckBox.margin",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "CheckBox.rollover",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "Checkbox.select",
+            "class": "class java.awt.Color",
+            "value": "SELECTION"
+          },
+          {
+            "key": "CheckBox.textIconGap",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "CheckBox.textShiftOffset",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "CheckBox.totalInsets",
+            "class": "class java.awt.Insets",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "ComboBox",
+        "contents": [
+          {
+            "key": "ComboBox.actionMap",
+            "class": "class javax.swing.plaf.basic.LazyActionMap",
+            "value": null
+          },
+          {
+            "key": "ComboBox.ancestorInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "ComboBox.background",
+            "class": "class java.awt.Color",
+            "value": "CONTENT"
+          },
+          {
+            "key": "ComboBox.buttonBackground",
+            "class": "class java.awt.Color",
+            "value": "CONTENT"
+          },
+          {
+            "key": "ComboBox.buttonDarkShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ComboBox.buttonHighlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ComboBox.buttonShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ComboBox.disabledBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ComboBox.disabledForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ComboBox.font",
+            "class": "class java.awt.Font",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "ComboBox.foreground",
+            "class": "class java.awt.Color",
+            "value": "TEXT"
+          },
+          {
+            "key": "ComboBox.isEnterSelectablePopup",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "ComboBox.noActionOnKeyNavigation",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "ComboBox.selectionBackground",
+            "class": "class java.awt.Color",
+            "value": "SELECTION"
+          },
+          {
+            "key": "ComboBox.selectionForeground",
+            "class": "class java.awt.Color",
+            "value": "CARET"
+          },
+          {
+            "key": "ComboBox.timeFactor",
+            "class": "class java.lang.Long",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "EditorPane",
+        "contents": [
+          {
+            "key": "EditorPane.background",
+            "class": "class java.awt.Color",
+            "value": "CONTENT"
+          },
+          {
+            "key": "EditorPane.border",
+            "class": "class javax.swing.border.BevelBorder",
+            "value": "CONTENT_BORDER"
+          },
+          {
+            "key": "EditorPane.caretBlinkRate",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "EditorPane.caretForeground",
+            "class": "class java.awt.Color",
+            "value": "CARET"
+          },
+          {
+            "key": "EditorPane.focusInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "EditorPane.font",
+            "class": "class java.awt.Font",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "EditorPane.foreground",
+            "class": "class java.awt.Color",
+            "value": "TEXT"
+          },
+          {
+            "key": "EditorPane.inactiveForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "EditorPane.margin",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "EditorPane.selectionBackground",
+            "class": "class java.awt.Color",
+            "value": "SELECTION"
+          },
+          {
+            "key": "EditorPane.selectionForeground",
+            "class": "class java.awt.Color",
+            "value": "CARET"
+          }
+        ]
+      },
+      {
+        "item": "FormattedTextField",
+        "contents": [
+          {
+            "key": "FormattedTextField.background",
+            "class": "class java.awt.Color",
+            "value": "CONTENT"
+          },
+          {
+            "key": "FormattedTextField.border",
+            "class": "class javax.swing.border.BevelBorder",
+            "value": "CONTENT_BORDER"
+          },
+          {
+            "key": "FormattedTextField.caretBlinkRate",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "FormattedTextField.caretForeground",
+            "class": "class java.awt.Color",
+            "value": "CARET"
+          },
+          {
+            "key": "FormattedTextField.focusInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "FormattedTextField.font",
+            "class": "class java.awt.Font",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "FormattedTextField.foreground",
+            "class": "class java.awt.Color",
+            "value": "TEXT"
+          },
+          {
+            "key": "FormattedTextField.inactiveBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "FormattedTextField.inactiveForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "FormattedTextField.margin",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "FormattedTextField.selectionBackground",
+            "class": "class java.awt.Color",
+            "value": "SELECTION"
+          },
+          {
+            "key": "FormattedTextField.selectionForeground",
+            "class": "class java.awt.Color",
+            "value": "CARET"
+          }
+        ]
+      },
+      {
+        "item": "Label",
+        "contents": [
+          {
+            "key": "Label.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "REGULAR"
+          },
+          {
+            "key": "Label.disabledForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Label.disabledShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Label.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "Label.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          }
+        ]
+      },
+      {
+        "item": "List",
+        "contents": [
+          {
+            "key": "List.actionMap",
+            "class": "class javax.swing.plaf.basic.LazyActionMap",
+            "value": null
+          },
+          {
+            "key": "List.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CONTENT"
+          },
+          {
+            "key": "List.cellRenderer",
+            "class": "class javax.swing.DefaultListCellRenderer$UIResource",
+            "value": null
+          },
+          {
+            "key": "List.dropCellBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CONTENT"
+          },
+          {
+            "key": "List.dropLineColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "List.focusCellHighlightBorder",
+            "class": "class javax.swing.plaf.BorderUIResource$LineBorderUIResource",
+            "value": null
+          },
+          {
+            "key": "List.focusInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "List.focusInputMap.RightToLeft",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "List.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "List.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "List.noFocusBorder",
+            "class": "class javax.swing.plaf.BorderUIResource$EmptyBorderUIResource",
+            "value": null
+          },
+          {
+            "key": "List.selectionBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "SELECTION"
+          },
+          {
+            "key": "List.selectionForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "CARET"
+          },
+          {
+            "key": "List.timeFactor",
+            "class": "class java.lang.Long",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "PasswordField",
+        "contents": [
+          {
+            "key": "PasswordField.actionMap",
+            "class": "class javax.swing.plaf.ActionMapUIResource",
+            "value": null
+          },
+          {
+            "key": "PasswordField.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CONTENT"
+          },
+          {
+            "key": "PasswordField.border",
+            "class": "class javax.swing.plaf.BorderUIResource$CompoundBorderUIResource",
+            "value": "CONTENT_BORDER"
+          },
+          {
+            "key": "PasswordField.caretBlinkRate",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "PasswordField.caretForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "CARET"
+          },
+          {
+            "key": "PasswordField.echoChar",
+            "class": "class java.lang.Character",
+            "value": null
+          },
+          {
+            "key": "PasswordField.focusInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "PasswordField.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "VERDANA"
+          },
+          {
+            "key": "PasswordField.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "PasswordField.inactiveBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "PasswordField.inactiveForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "PasswordField.margin",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "PasswordField.selectionBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "SELECTION"
+          },
+          {
+            "key": "PasswordField.selectionForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "CARET"
+          }
+        ]
+      },
+      {
+        "item": "ProgressBar",
+        "contents": [
+          {
+            "key": "ProgressBar.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CONTENT"
+          },
+          {
+            "key": "ProgressBar.border",
+            "class": "class javax.swing.plaf.BorderUIResource$LineBorderUIResource",
+            "value": "CONTENT_BORDER"
+          },
+          {
+            "key": "ProgressBar.cellLength",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "ProgressBar.cellSpacing",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "ProgressBar.cycleTime",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "ProgressBar.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "ProgressBar.foreground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "ProgressBar.horizontalSize",
+            "class": "class javax.swing.plaf.DimensionUIResource",
+            "value": null
+          },
+          {
+            "key": "ProgressBar.repaintInterval",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "ProgressBar.selectionBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "SELECTION"
+          },
+          {
+            "key": "ProgressBar.selectionForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CARET"
+          },
+          {
+            "key": "ProgressBar.verticalSize",
+            "class": "class javax.swing.plaf.DimensionUIResource",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "RadioButton",
+        "contents": [
+          {
+            "key": "RadioButton.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "REGULAR"
+          },
+          {
+            "key": "RadioButton.border",
+            "class": "class javax.swing.plaf.BorderUIResource$CompoundBorderUIResource",
+            "value": "PANEL_BORDER"
+          },
+          {
+            "key": "RadioButton.darkShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "RadioButton.disabledText",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "RadioButton.focus",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "RadioButton.focusInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "RadioButton.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "RadioButton.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "RadioButton.gradient",
+            "class": "class java.util.Arrays$ArrayList",
+            "value": null
+          },
+          {
+            "key": "RadioButton.highlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "RadioButton.icon",
+            "class": "class javax.swing.plaf.metal.MetalIconFactory$RadioButtonIcon",
+            "value": null
+          },
+          {
+            "key": "RadioButton.light",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "RadioButton.margin",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "RadioButton.rollover",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "RadioButton.select",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "SELECTION"
+          },
+          {
+            "key": "RadioButton.shadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "RadioButton.textIconGap",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "RadioButton.textShiftOffset",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "RadioButton.totalInsets",
+            "class": "class java.awt.Insets",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "ScrollPane",
+        "contents": [
+          {
+            "key": "ScrollPane.actionMap",
+            "class": "class javax.swing.plaf.basic.LazyActionMap",
+            "value": null
+          },
+          {
+            "key": "ScrollPane.ancestorInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "ScrollPane.ancestorInputMap.RightToLeft",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "ScrollPane.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CONTENT"
+          },
+          {
+            "key": "ScrollPane.border",
+            "class": "class javax.swing.plaf.metal.MetalBorders$ScrollPaneBorder",
+            "value": "PANEL_BORDER"
+          },
+          {
+            "key": "ScrollPane.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "ScrollPane.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "ScrollBar.actionMap",
+            "class": "class javax.swing.plaf.basic.LazyActionMap",
+            "value": null
+          },
+          {
+            "key": "ScrollBar.allowsAbsolutePositioning",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "ScrollBar.ancestorInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "ScrollBar.ancestorInputMap.RightToLeft",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "ScrollBar.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CONTENT"
+          },
+          {
+            "key": "ScrollBar.darkShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ScrollBar.foreground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "ScrollBar.gradient",
+            "class": "class java.util.Arrays$ArrayList",
+            "value": null
+          },
+          {
+            "key": "ScrollBar.highlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ScrollBar.maximumThumbSize",
+            "class": "class javax.swing.plaf.DimensionUIResource",
+            "value": null
+          },
+          {
+            "key": "ScrollBar.minimumThumbSize",
+            "class": "class javax.swing.plaf.DimensionUIResource",
+            "value": null
+          },
+          {
+            "key": "ScrollBar.shadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ScrollBar.thumb",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "BACKDROP"
+          },
+          {
+            "key": "ScrollBar.thumbDarkShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ScrollBar.thumbHighlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "SELECTION"
+          },
+          {
+            "key": "ScrollBar.thumbShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ScrollBar.track",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "BACKDROP"
+          },
+          {
+            "key": "ScrollBar.trackHighlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ScrollBar.width",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "Viewport.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "BACKDROP"
+          },
+          {
+            "key": "Viewport.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "Viewport.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          }
+        ]
+      },
+      {
+        "item": "Slider",
+        "contents": [
+          {
+            "key": "Slider.altTrackColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Slider.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CONTENT"
+          },
+          {
+            "key": "Slider.focus",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Slider.focusGradient",
+            "class": "class java.util.Arrays$ArrayList",
+            "value": null
+          },
+          {
+            "key": "Slider.focusInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "Slider.focusInputMap.RightToLeft",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "Slider.focusInsets",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "Slider.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "Slider.foreground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "Slider.gradient",
+            "class": "class java.util.Arrays$ArrayList",
+            "value": null
+          },
+          {
+            "key": "Slider.highlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Slider.horizontalSize",
+            "class": "class java.awt.Dimension",
+            "value": null
+          },
+          {
+            "key": "Slider.horizontalThumbIcon",
+            "class": "class javax.swing.plaf.metal.MetalIconFactory$OceanHorizontalSliderThumbIcon",
+            "value": null
+          },
+          {
+            "key": "Slider.majorTickLength",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "Slider.minimumHorizontalSize",
+            "class": "class java.awt.Dimension",
+            "value": null
+          },
+          {
+            "key": "Slider.minimumVerticalSize",
+            "class": "class java.awt.Dimension",
+            "value": null
+          },
+          {
+            "key": "Slider.onlyLeftMouseButtonDrag",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "Slider.shadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Slider.tickColor",
+            "class": "class java.awt.Color",
+            "value": "CONTENT"
+          },
+          {
+            "key": "Slider.trackWidth",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "Slider.verticalSize",
+            "class": "class java.awt.Dimension",
+            "value": null
+          },
+          {
+            "key": "Slider.verticalThumbIcon",
+            "class": "class javax.swing.plaf.metal.MetalIconFactory$OceanVerticalSliderThumbIcon",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "Spinner",
+        "contents": [
+          {
+            "key": "Spinner.ancestorInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "Spinner.arrowButtonBorder",
+            "class": "class javax.swing.plaf.BorderUIResource$CompoundBorderUIResource",
+            "value": null
+          },
+          {
+            "key": "Spinner.arrowButtonInsets",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "Spinner.arrowButtonSize",
+            "class": "class java.awt.Dimension",
+            "value": null
+          },
+          {
+            "key": "Spinner.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CONTENT"
+          },
+          {
+            "key": "Spinner.border",
+            "class": "class javax.swing.plaf.BorderUIResource$CompoundBorderUIResource",
+            "value": "PANEL_BORDER"
+          },
+          {
+            "key": "Spinner.editorAlignment",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "Spinner.editorBorderPainted",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "Spinner.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "Spinner.foreground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "TEXT"
+          }
+        ]
+      },
+      {
+        "item": "Table",
+        "contents": [
+          {
+            "key": "Table.actionMap",
+            "class": "class javax.swing.plaf.basic.LazyActionMap",
+            "value": null
+          },
+          {
+            "key": "Table.ancestorInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "Table.ancestorInputMap.RightToLeft",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "Table.ascendingSortIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "Table.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CONTENT"
+          },
+          {
+            "key": "Table.descendingSortIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "Table.dropCellBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CONTENT"
+          },
+          {
+            "key": "Table.dropLineColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Table.dropLineShortColor",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Table.focusCellBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "SELECTION"
+          },
+          {
+            "key": "Table.focusCellForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "CARET"
+          },
+          {
+            "key": "Table.focusCellHighlightBorder",
+            "class": "class javax.swing.plaf.BorderUIResource$LineBorderUIResource",
+            "value": null
+          },
+          {
+            "key": "Table.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "Table.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "Table.gridColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "REGULAR"
+          },
+          {
+            "key": "Table.scrollPaneBorder",
+            "class": "class javax.swing.plaf.metal.MetalBorders$ScrollPaneBorder",
+            "value": null
+          },
+          {
+            "key": "Table.selectionBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "SELECTION"
+          },
+          {
+            "key": "Table.selectionForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "CARET"
+          },
+          {
+            "key": "Table.sortIconColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TableHeader.actionMap",
+            "class": "class javax.swing.plaf.basic.LazyActionMap",
+            "value": null
+          },
+          {
+            "key": "TableHeader.ancestorInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "TableHeader.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "BACKDROP"
+          },
+          {
+            "key": "TableHeader.cellBorder",
+            "class": "class javax.swing.plaf.metal.MetalBorders$TableHeaderBorder",
+            "value": "PANEL_BORDER"
+          },
+          {
+            "key": "TableHeader.focusCellBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TableHeader.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "TableHeader.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          }
+        ]
+      },
+      {
+        "item": "TextArea",
+        "contents": [
+          {
+            "key": "TextArea.actionMap",
+            "class": "class javax.swing.plaf.ActionMapUIResource",
+            "value": null
+          },
+          {
+            "key": "TextArea.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CONTENT"
+          },
+          {
+            "key": "TextArea.border",
+            "class": "class javax.swing.plaf.basic.BasicBorders$MarginBorder",
+            "value": "CONTENT_BORDER"
+          },
+          {
+            "key": "TextArea.caretBlinkRate",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "TextArea.caretForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "CARET"
+          },
+          {
+            "key": "TextArea.focusInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "TextArea.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "TextArea.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "TextArea.inactiveForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TextArea.margin",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "TextArea.selectionBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "SELECTION"
+          },
+          {
+            "key": "TextArea.selectionForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "CARET"
+          }
+        ]
+      },
+      {
+        "item": "TextField",
+        "contents": [
+          {
+            "key": "TextField.actionMap",
+            "class": "class javax.swing.plaf.ActionMapUIResource",
+            "value": null
+          },
+          {
+            "key": "TextField.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CONTENT"
+          },
+          {
+            "key": "TextField.border",
+            "class": "class javax.swing.plaf.BorderUIResource$CompoundBorderUIResource",
+            "value": "CONTENT_BORDER"
+          },
+          {
+            "key": "TextField.caretBlinkRate",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "TextField.caretForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "CARET"
+          },
+          {
+            "key": "TextField.darkShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TextField.focusInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "TextField.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "TextField.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "TextField.highlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TextField.inactiveBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TextField.inactiveForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TextField.light",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TextField.margin",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "TextField.selectionBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "SELECTION"
+          },
+          {
+            "key": "TextField.selectionForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "CARET"
+          },
+          {
+            "key": "TextField.shadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "TextPane",
+        "contents": [
+          {
+            "key": "TextPane.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "CONTENT"
+          },
+          {
+            "key": "TextPane.border",
+            "class": "class javax.swing.plaf.basic.BasicBorders$MarginBorder",
+            "value": "CONTENT_BORDER"
+          },
+          {
+            "key": "TextPane.caretBlinkRate",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "TextPane.caretForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "CARET"
+          },
+          {
+            "key": "TextPane.focusInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "TextPane.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": "UNIFONT"
+          },
+          {
+            "key": "TextPane.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "TEXT"
+          },
+          {
+            "key": "TextPane.inactiveForeground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "TextPane.margin",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "TextPane.selectionBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": "SELECTION"
+          },
+          {
+            "key": "TextPane.selectionForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": "CARET"
+          }
+        ]
+      },
+      {
+        "item": "ToggleButton",
+        "contents": [
+          {
+            "key": "ToggleButton.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.border",
+            "class": "class javax.swing.plaf.BorderUIResource$CompoundBorderUIResource",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.darkShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.disabledText",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.focus",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.focusInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.gradient",
+            "class": "class java.util.Arrays$ArrayList",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.highlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.light",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.margin",
+            "class": "class javax.swing.plaf.InsetsUIResource",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.select",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.shadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.textIconGap",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "ToggleButton.textShiftOffset",
+            "class": "class java.lang.Integer",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "Tree",
+        "contents": [
+          {
+            "key": "Tree.ancestorInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.background",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.changeSelectionWithFocus",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "Tree.closedIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.collapsedIcon",
+            "class": "class javax.swing.plaf.metal.OceanTheme$COIcon",
+            "value": null
+          },
+          {
+            "key": "Tree.drawsFocusBorderAroundIcon",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "Tree.dropCellBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.dropLineColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.editorBorder",
+            "class": "class javax.swing.plaf.BorderUIResource$LineBorderUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.expandedIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.focusInputMap",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.focusInputMap.RightToLeft",
+            "class": "class javax.swing.plaf.InputMapUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.font",
+            "class": "class javax.swing.plaf.FontUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.foreground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.hash",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.leafIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.leftChildIndent",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "Tree.line",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.lineTypeDashed",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "Tree.openIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.paintLines",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "Tree.rightChildIndent",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "Tree.rowHeight",
+            "class": "class java.lang.Integer",
+            "value": null
+          },
+          {
+            "key": "Tree.scrollsOnExpand",
+            "class": "class java.lang.Boolean",
+            "value": null
+          },
+          {
+            "key": "Tree.selectionBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.selectionBorderColor",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.selectionForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.textBackground",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.textForeground",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "Tree.timeFactor",
+            "class": "class java.lang.Long",
+            "value": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Misc",
+    "contents": [
+      {
+        "item": "AuditoryCues",
+        "contents": [
+          {
+            "key": "AuditoryCues.allAuditoryCues",
+            "class": "class [Ljava.lang.Object;",
+            "value": null
+          },
+          {
+            "key": "AuditoryCues.cueList",
+            "class": "class [Ljava.lang.Object;",
+            "value": null
+          },
+          {
+            "key": "AuditoryCues.defaultCueList",
+            "class": "class [Ljava.lang.Object;",
+            "value": null
+          },
+          {
+            "key": "AuditoryCues.noAuditoryCues",
+            "class": "class [Ljava.lang.Object;",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "FileView",
+        "contents": [
+          {
+            "key": "FileView.computerIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "FileView.directoryIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "FileView.fileIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "FileView.floppyDriveIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "FileView.hardDriveIcon",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "UI",
+        "contents": [
+          {
+            "key": "ButtonUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "CheckBoxUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "CheckBoxMenuItemUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "ColorChooserUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "ComboBoxUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "DesktopIconUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "DesktopPaneUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "EditorPaneUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "FileChooserUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "FormattedTextFieldUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "InternalFrameUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "LabelUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "ListUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "MenuUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "MenuBarUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "MenuItemUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "OptionPaneUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "PanelUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "PasswordFieldUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "PopupMenuUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "PopupMenuSeparatorUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "ProgressBarUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "RadioButtonUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "RadioButtonMenuItemUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "RootPaneUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "ScrollBarUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "ScrollPaneUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "SeparatorUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "SliderUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "SpinnerUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "SplitPaneUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "TabbedPaneUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "TableUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "TableHeaderUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "TextAreaUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "TextFieldUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "TextPaneUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "ToggleButtonUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "ToolBarUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "ToolBarSeparatorUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "ToolTipUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "TreeUI",
+            "class": "class java.lang.String",
+            "value": null
+          },
+          {
+            "key": "ViewportUI",
+            "class": "class java.lang.String",
+            "value": null
+          }
+        ]
+      },
+      {
+        "item": "Other",
+        "contents": [
+          {
+            "key": "Text-specific antialiasing enable key",
+            "class": "class sun.awt.SunHints$Value",
+            "value": null
+          },
+          {
+            "key": "activeCaption",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "activeCaptionBorder",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "activeCaptionText",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.basic.BasicListUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.basic.BasicMenuItemUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.basic.BasicMenuUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.basic.BasicPanelUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.basic.BasicPasswordFieldUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.basic.BasicPopupMenuUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.basic.BasicTableHeaderUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.basic.BasicTableUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.basic.BasicTextAreaUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.basic.BasicViewportUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.metal.MetalButtonUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.metal.MetalComboBoxUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.metal.MetalLabelUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.metal.MetalMenuBarUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.metal.MetalRootPaneUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.metal.MetalScrollBarUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.metal.MetalScrollPaneUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "class javax.swing.plaf.metal.MetalTextFieldUI",
+            "class": "class java.lang.reflect.Method",
+            "value": null
+          },
+          {
+            "key": "control",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "controlDkShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "controlHighlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "controlLtHighlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "controlShadow",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "controlText",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "desktop",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "html.missingImage",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "html.pendingImage",
+            "class": "class sun.swing.ImageIconUIResource",
+            "value": null
+          },
+          {
+            "key": "inactiveCaption",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "inactiveCaptionBorder",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "inactiveCaptionText",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "info",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "infoText",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.basic.BasicListUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.basic.BasicMenuItemUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.basic.BasicMenuUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.basic.BasicPanelUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.basic.BasicPasswordFieldUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.basic.BasicPopupMenuUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.basic.BasicTableHeaderUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.basic.BasicTableUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.basic.BasicTextAreaUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.basic.BasicViewportUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.metal.MetalButtonUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.metal.MetalComboBoxUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.metal.MetalLabelUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.metal.MetalMenuBarUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.metal.MetalRootPaneUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.metal.MetalScrollBarUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.metal.MetalScrollPaneUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "javax.swing.plaf.metal.MetalTextFieldUI",
+            "class": "class java.lang.Class",
+            "value": null
+          },
+          {
+            "key": "menu",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "menuText",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "scrollbar",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "text",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "textHighlight",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "textHighlightText",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "textInactiveText",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "textText",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          },
+          {
+            "key": "window",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "windowBorder",
+            "class": "class javax.swing.plaf.ColorUIResource",
+            "value": null
+          },
+          {
+            "key": "windowText",
+            "class": "class sun.swing.PrintColorUIResource",
+            "value": null
+          }
+        ]
+      }
+    ]
+  }
+]
