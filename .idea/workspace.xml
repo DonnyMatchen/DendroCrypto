@@ -1,8 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="DendroCrypto:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b24a71ca-022e-4d4f-81a2-a17d43395b76" name="Changes" comment="files missed">
+    <list default="true" id="b24a71ca-022e-4d4f-81a2-a17d43395b76" name="Changes" comment="got the build set up properly">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/DendroECC_v1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/fileio/ProgramFileHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/customswing/HexField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/customswing/IOPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/DendroCrypto_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/DendroCrypto_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/DendroFactor_v1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/fasterxml_jackson_core.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_25_22,_5_34_AM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_25_22__5_34_AM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DendroCrypto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DendroCrypto.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jackson-core-2.13.3-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jackson-core-2.13.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/DendroCrypto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/DendroCrypto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/AesEH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/symmetric/Aes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/EncryptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/symmetric/SKEHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/HashHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/hash/HashHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/KeysNotSetException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/symmetric/KeysNotSetException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/ShaHH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/encryption/hash/Sha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/MainGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/ProgramMainGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/customswing/DendroFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/customswing/components/HexField.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/customswing/components/IOPane.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/ExportableToJson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonBool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonDecimal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonFormattingException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonNull.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/json/JsonType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/resources/ui.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/resources/unifont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/resources/verdana.ttf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +94,8 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/donny/Sync/Personal/dv/LIBRARIES/DendroFactor-v1.0.0.jar",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/donny/Sync/Personal/dv/LIBRARIES/DendroECC-v1.0.1.jar",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -94,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661419440294</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="got the build set up properly">
+      <created>1661458368972</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661458368973</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +163,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="files missed" />
-    <option name="LAST_COMMIT_MESSAGE" value="files missed" />
+    <MESSAGE value="got the build set up properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="got the build set up properly" />
   </component>
 </project>

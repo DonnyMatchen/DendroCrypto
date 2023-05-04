@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="DendroECC-v1.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../LIBRARIES/DendroECC-v1.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
