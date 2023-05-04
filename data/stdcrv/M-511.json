@@ -1,0 +1,28 @@
+{
+  "name": "M-511",
+  "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+  "form": "Montgomery",
+  "field": {
+    "type": "Prime",
+    "p": "0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF45",
+    "bits": 511
+  },
+  "params": {
+    "a": {
+      "raw": "0x081806"
+    },
+    "b": {
+      "raw": "0x01"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0x05"
+    },
+    "y": {
+      "raw": "0x2fbdc0ad8530803d28fdbad354bb488d32399ac1cf8f6e01ee3f96389b90c809422b9429e8a43dbf49308ac4455940abe9f1dbca542093a895e30a64af056fa5"
+    }
+  },
+  "order": "0x100000000000000000000000000000000000000000000000000000000000000017B5FEFF30C7F5677AB2AEEBD13779A2AC125042A6AA10BFA54C15BAB76BAF1B",
+  "cofactor": "0x08"
+}

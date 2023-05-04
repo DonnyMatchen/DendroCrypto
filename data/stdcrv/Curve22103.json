@@ -1,0 +1,28 @@
+{
+  "name": "Curve22103",
+  "desc": "Curve from https://github.com/relic-toolkit/relic",
+  "form": "Weierstrass",
+  "field": {
+    "type": "Prime",
+    "p": "0x1ffffffffffffffffffffffffffffffffffffffffffffffffffffffd",
+    "bits": 221
+  },
+  "params": {
+    "a": {
+      "raw": "0x155555555555555555555555555555555555555555555552174084FF"
+    },
+    "b": {
+      "raw": "0x1425ED097B425ED097B425ED097B425ED097B425ED0BBA9428427967"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0xCB476FE081B61F56A60B1D1B34FB7207D072EF25DADF377731049B0"
+    },
+    "y": {
+      "raw": "0x36429404D97E1E217BAD2E5601F6551F95D8FE9481BD454D1F3E7B6"
+    }
+  },
+  "order": "0x3FFFFFFFFFFFFFFFFFFFFFFFFFFF5CD04695A145C3067CF4AAE2025",
+  "cofactor": "0x08"
+}

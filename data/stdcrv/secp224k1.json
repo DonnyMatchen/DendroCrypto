@@ -1,0 +1,64 @@
+{
+  "name": "secp224k1",
+  "desc": "A Koblitz curve.",
+  "oid": "1.3.132.0.32",
+  "form": "Weierstrass",
+  "field": {
+    "type": "Prime",
+    "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffeffffe56d",
+    "bits": 224
+  },
+  "params": {
+    "a": {
+      "raw": "0x00000000000000000000000000000000000000000000000000000000"
+    },
+    "b": {
+      "raw": "0x00000000000000000000000000000000000000000000000000000005"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0xa1455b334df099df30fc28a169a467e9e47075a90f7e650eb6b7a45c"
+    },
+    "y": {
+      "raw": "0x7e089fed7fba344282cafbd6f7e319f7c0b0bd59e2ca4bdb556d61a5"
+    }
+  },
+  "order": "0x10000000000000000000000000001dce8d2ec6184caf0a971769fb1f7",
+  "cofactor": "0x01",
+  "aliases": [
+    "x963/ansip224k1"
+  ],
+  "characteristics": {
+    "j_invariant": "0",
+    "anomalous": false,
+    "cm_disc": "107839786668602559178668060348078532367421760350741791992292904493629",
+    "conductor": "1",
+    "discriminant": "26959946667150639794667015087019630673637144422540572481099315264317",
+    "embedding_degree": "4493324444525106632444502514503273391085054513853345758165826444713",
+    "torsion_degrees": [
+      {
+        "full": 3,
+        "least": 3,
+        "r": 2
+      },
+      {
+        "full": 2,
+        "least": 2,
+        "r": 3
+      },
+      {
+        "full": 24,
+        "least": 24,
+        "r": 5
+      },
+      {
+        "full": 3,
+        "least": 3,
+        "r": 7
+      }
+    ],
+    "supersingular": false,
+    "trace_of_frobenius": "-9672873182660579502067895643393161"
+  }
+}

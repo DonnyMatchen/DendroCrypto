@@ -1,0 +1,28 @@
+{
+  "name": "MDC201601",
+  "desc": "The Million Dollar Curve",
+  "form": "Edwards",
+  "field": {
+    "type": "Prime",
+    "p": "0xf13b68b9d456afb4532f92fdd7a5fd4f086a9037ef07af9ec13710405779ec13",
+    "bits": 256
+  },
+  "params": {
+    "c": {
+      "raw": "0x01"
+    },
+    "d": {
+      "raw": "0x571304521965b68a7cdfbfccfb0cb9625f1270f63f21f041ee9309250300cf89"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0xb681886a7f903b83d85b421e03cbcf6350d72abb8d2713e2232c25bfee68363b"
+    },
+    "y": {
+      "raw": "0xca6734e1b59c0b0359814dcf6563da421da8bc3d81a93a3a7e73c355bd2864b5"
+    }
+  },
+  "order": "0x3c4eda2e7515abed14cbe4bf75e97f534fb38975faf974bb588552f421b0f7fb",
+  "cofactor": "0x04"
+}

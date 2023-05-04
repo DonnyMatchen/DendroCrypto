@@ -1,0 +1,28 @@
+{
+  "name": "E-521",
+  "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+  "form": "Edwards",
+  "field": {
+    "type": "Prime",
+    "p": "0x1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "bits": 521
+  },
+  "params": {
+    "c": {
+      "raw": "0x01"
+    },
+    "d": {
+      "raw": "0x1fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa4331"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0x752cb45c48648b189df90cb2296b2878a3bfd9f42fc6c818ec8bf3c9c0c6203913f6ecc5ccc72434b1ae949d568fc99c6059d0fb13364838aa302a940a2f19ba6c"
+    },
+    "y": {
+      "raw": "0x0c"
+    }
+  },
+  "order": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd15b6c64746fc85f736b8af5e7ec53f04fbd8c4569a8f1f4540ea2435f5180d6b",
+  "cofactor": "0x04"
+}

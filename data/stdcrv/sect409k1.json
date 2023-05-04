@@ -1,0 +1,55 @@
+{
+  "name": "sect409k1",
+  "desc": "",
+  "oid": "1.3.132.0.36",
+  "form": "Weierstrass",
+  "field": {
+    "type": "Binary",
+    "bits": 409,
+    "degree": 409,
+    "poly": [
+      {
+        "coeff": "0x01",
+        "power": 409
+      },
+      {
+        "coeff": "0x01",
+        "power": 87
+      },
+      {
+        "coeff": "0x01",
+        "power": 0
+      }
+    ],
+    "basis": "poly"
+  },
+  "params": {
+    "a": {
+      "raw": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "b": {
+      "raw": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0x0060f05f658f49c1ad3ab1890f7184210efd0987e307c84c27accfb8f9f67cc2c460189eb5aaaa62ee222eb1b35540cfe9023746"
+    },
+    "y": {
+      "raw": "0x01e369050b7c4e42acba1dacbf04299c3460782f918ea427e6325165e9ea10e3da5f6c42e9c55215aa9ca27a5863ec48d8e0286b"
+    }
+  },
+  "order": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffe5f83b2d4ea20400ec4557d5ed3e3e7ca5b4b5c83b8e01e5fcf",
+  "cofactor": "0x4",
+  "aliases": [
+    "nist/K-409",
+    "x963/ansit409k1"
+  ],
+  "characteristics": {
+    "j_invariant": "1",
+    "anomalous": false,
+    "discriminant": "1",
+    "supersingular": false,
+    "trace_of_frobenius": "10457288737315625927447685387048320737638796957687575791173829"
+  }
+}

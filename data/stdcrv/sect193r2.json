@@ -1,0 +1,47 @@
+{
+  "name": "sect193r2",
+  "desc": "",
+  "oid": "1.3.132.0.25",
+  "form": "Weierstrass",
+  "field": {
+    "type": "Binary",
+    "bits": 193,
+    "degree": 193,
+    "poly": [
+      {
+        "coeff": "0x01",
+        "power": 193
+      },
+      {
+        "coeff": "0x01",
+        "power": 15
+      },
+      {
+        "coeff": "0x01",
+        "power": 0
+      }
+    ],
+    "basis": "poly"
+  },
+  "params": {
+    "a": {
+      "raw": "0x0163f35a5137c2ce3ea6ed8667190b0bc43ecd69977702709b"
+    },
+    "b": {
+      "raw": "0x00c9bb9e8927d4d64c377e2ab2856a5b16e3efb7f61d4316ae"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0x00d9b67d192e0367c803f39e1a7e82ca14a651350aae617e8f"
+    },
+    "y": {
+      "raw": "0x01ce94335607c304ac29e7defbd9ca01f596f927224cdecf6c"
+    }
+  },
+  "order": "0x010000000000000000000000015aab561b005413ccd4ee99d5",
+  "cofactor": "0x2",
+  "aliases": [
+    "x963/ansit193r2"
+  ]
+}

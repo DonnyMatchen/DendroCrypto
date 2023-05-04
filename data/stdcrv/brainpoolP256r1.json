@@ -1,0 +1,71 @@
+{
+  "name": "brainpoolP256r1",
+  "desc": "",
+  "oid": "1.3.36.3.3.2.8.1.1.7",
+  "form": "Weierstrass",
+  "field": {
+    "type": "Prime",
+    "p": "0xa9fb57dba1eea9bc3e660a909d838d726e3bf623d52620282013481d1f6e5377",
+    "bits": 256
+  },
+  "params": {
+    "a": {
+      "raw": "0x7d5a0975fc2c3057eef67530417affe7fb8055c126dc5c6ce94a4b44f330b5d9"
+    },
+    "b": {
+      "raw": "0x26dc5c6ce94a4b44f330b5d9bbd77cbf958416295cf7e1ce6bccdc18ff8c07b6"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0x8bd2aeb9cb7e57cb2c4b482ffc81b7afb9de27e1e3bd23c23a4453bd9ace3262"
+    },
+    "y": {
+      "raw": "0x547ef835c3dac4fd97f8461a14611dc9c27745132ded8e545c1d54c72f046997"
+    }
+  },
+  "order": "0xa9fb57dba1eea9bc3e660a909d838d718c397aa3b561a6f7901e0e82974856a7",
+  "cofactor": "0x1",
+  "characteristics": {
+    "j_invariant": "75626560605944752908522971663649678250473810658385377252202978737957396909999",
+    "anomalous": false,
+    "cm_disc": "307539825588181376883238986516006596371851382387243695149962323398158084952331",
+    "conductor": "1",
+    "discriminant": "15036242490247342171513009477805930598983339216081386851174014206346325949410",
+    "embedding_degree": "38442478198522672110404873314500824546368765892207264769377759531531768179539",
+    "torsion_degrees": [
+      {
+        "full": 3,
+        "least": 3,
+        "r": 2
+      },
+      {
+        "full": 8,
+        "least": 8,
+        "r": 3
+      },
+      {
+        "full": 10,
+        "least": 2,
+        "r": 5
+      },
+      {
+        "full": 48,
+        "least": 48,
+        "r": 7
+      },
+      {
+        "full": 10,
+        "least": 10,
+        "r": 11
+      },
+      {
+        "full": 12,
+        "least": 3,
+        "r": 13
+      }
+    ],
+    "supersingular": false,
+    "trace_of_frobenius": "300418416528525664980082381967979838673"
+  }
+}

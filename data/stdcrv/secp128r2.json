@@ -1,0 +1,72 @@
+{
+  "name": "secp128r2",
+  "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
+  "oid": "1.3.132.0.29",
+  "form": "Weierstrass",
+  "field": {
+    "type": "Prime",
+    "p": "0xfffffffdffffffffffffffffffffffff",
+    "bits": 128
+  },
+  "params": {
+    "a": {
+      "raw": "0xd6031998d1b3bbfebf59cc9bbff9aee1"
+    },
+    "b": {
+      "raw": "0x5eeefca380d02919dc2c6558bb6d8a5d"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0x7b6aa5d85e572983e6fb32a7cdebc140"
+    },
+    "y": {
+      "raw": "0x27b6916a894d3aee7106fe805fc34b44"
+    }
+  },
+  "order": "0x3fffffff7fffffffbe0024720613b5a3",
+  "cofactor": "0x04",
+  "characteristics": {
+    "seed": "004D696E67687561517512D8F03431FCE63B88F4",
+    "j_invariant": "194900232209907094972416409296981867603",
+    "anomalous": false,
+    "cm_disc": "340282366762482138430090171110323893666",
+    "conductor": "2",
+    "discriminant": "296974453756101405409198998476964181399",
+    "embedding_degree": "3866845076846387936543441905764257299",
+    "torsion_degrees": [
+      {
+        "full": 2,
+        "least": 1,
+        "r": 2
+      },
+      {
+        "full": 4,
+        "least": 4,
+        "r": 3
+      },
+      {
+        "full": 24,
+        "least": 24,
+        "r": 5
+      },
+      {
+        "full": 6,
+        "least": 6,
+        "r": 7
+      },
+      {
+        "full": 120,
+        "least": 120,
+        "r": 11
+      },
+      {
+        "full": 12,
+        "least": 3,
+        "r": 13
+      }
+    ],
+    "supersingular": false,
+    "trace_of_frobenius": "19023044537425668468"
+  }
+}

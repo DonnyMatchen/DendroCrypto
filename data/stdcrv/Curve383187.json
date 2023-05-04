@@ -1,0 +1,28 @@
+{
+  "name": "Curve383187",
+  "desc": "",
+  "form": "Montgomery",
+  "field": {
+    "type": "Prime",
+    "p": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff45",
+    "bits": 283
+  },
+  "params": {
+    "a": {
+      "raw": "0x38251"
+    },
+    "b": {
+      "raw": "0x01"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0x5"
+    },
+    "y": {
+      "raw": "0x1eebe07dc1871896732b12d5504a32370471965c7a11f2c89865f855ab3cbd7c224e3620c31af3370788457dd5ce46df"
+    }
+  },
+  "order": "0x1000000000000000000000000000000000000000000000000e85a85287a1488acd41ae84b2b7030446f72088b00a0e21",
+  "cofactor": "0x8"
+}

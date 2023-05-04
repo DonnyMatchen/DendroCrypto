@@ -1,0 +1,66 @@
+{
+  "name": "sect163r2",
+  "desc": "A randomly generated curve. 'E was selected from S as specified in ANSI X9.62 [X9.62] in normal basis representation and converted into polynomial basis representation.'",
+  "oid": "1.3.132.0.15",
+  "form": "Weierstrass",
+  "field": {
+    "type": "Binary",
+    "bits": 163,
+    "degree": 163,
+    "poly": [
+      {
+        "coeff": "0x01",
+        "power": 163
+      },
+      {
+        "coeff": "0x01",
+        "power": 7
+      },
+      {
+        "coeff": "0x01",
+        "power": 6
+      },
+      {
+        "coeff": "0x01",
+        "power": 3
+      },
+      {
+        "coeff": "0x01",
+        "power": 0
+      }
+    ],
+    "basis": "poly"
+  },
+  "params": {
+    "a": {
+      "raw": "0x000000000000000000000000000000000000000001"
+    },
+    "b": {
+      "raw": "0x020a601907b8c953ca1481eb10512f78744a3205fd"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0x03f0eba16286a2d57ea0991168d4994637e8343e36"
+    },
+    "y": {
+      "raw": "0x00d51fbc6c71a0094fa2cdd545b11c5c0c797324f1"
+    }
+  },
+  "order": "0x040000000000000000000292fe77e70c12a4234c33",
+  "cofactor": "0x2",
+  "aliases": [
+    "nist/B-163",
+    "x963/ansit163r2"
+  ],
+  "characteristics": {
+    "seed": "85E25BFE5C86226CDB12016F7553F9D0E693A268",
+    "j_invariant": "924715273381456531451948543458511393546700947074",
+    "anomalous": false,
+    "cm_disc": "46768052394588893382517920870943573850256067434597",
+    "conductor": "1",
+    "discriminant": "2982236234343851336267446656627785008148015875581",
+    "supersingular": false,
+    "trace_of_frobenius": "-6224022517221266226059365"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Ed25519",
+  "desc": "Curve from https://ed25519.cr.yp.to",
+  "form": "TwistedEdwards",
+  "field": {
+    "type": "Prime",
+    "p": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffed",
+    "bits": 255
+  },
+  "params": {
+    "a": {
+      "raw": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec"
+    },
+    "d": {
+      "raw": "0x52036cee2b6ffe738cc740797779e89800700a4d4141d8ab75eb4dca135978a3"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0x216936D3CD6E53FEC0A4E231FDD6DC5C692CC7609525A7B2C9562D608F25D51A"
+    },
+    "y": {
+      "raw": "0x6666666666666666666666666666666666666666666666666666666666666658"
+    }
+  },
+  "order": "0x1000000000000000000000000000000014def9dea2f79cd65812631a5cf5d3ed",
+  "cofactor": "0x08",
+  "characteristics": {
+    "j_invariant": "39240375672115510010799456308813573486606784421612167109713554819120306934551",
+    "discriminant": "604592382411166409359847682163448376412977399592556651652337986082875105857",
+    "trace_of_frobenius": "-221938542218978828286815502327069187962"
+  }
+}

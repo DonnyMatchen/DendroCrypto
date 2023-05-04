@@ -1,0 +1,28 @@
+{
+  "name": "E-222",
+  "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+  "form": "Edwards",
+  "field": {
+    "type": "Prime",
+    "p": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffff8b",
+    "bits": 222
+  },
+  "params": {
+    "c": {
+      "raw": "0x01"
+    },
+    "d": {
+      "raw": "0x27166"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0x19b12bb156a389e55c9768c303316d07c23adab3736eb2bc3eb54e51"
+    },
+    "y": {
+      "raw": "0x1c"
+    }
+  },
+  "order": "0xffffffffffffffffffffffffffff70cbc95e932f802f31423598cbf",
+  "cofactor": "0x04"
+}

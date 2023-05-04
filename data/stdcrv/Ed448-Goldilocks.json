@@ -1,0 +1,28 @@
+{
+  "name": "Ed448-Goldilocks",
+  "desc": "Curve from https://eprint.iacr.org/2015/625.pdf",
+  "form": "TwistedEdwards",
+  "field": {
+    "type": "Prime",
+    "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "bits": 448
+  },
+  "params": {
+    "a": {
+      "raw": "0x01"
+    },
+    "d": {
+      "raw": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffff6756"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa955555555555555555555555555555555555555555555555555555555"
+    },
+    "y": {
+      "raw": "0xae05e9634ad7048db359d6205086c2b0036ed7a035884dd7b7e36d728ad8c4b80d6565833a2a3098bbbcb2bed1cda06bdaeafbcdea9386ed"
+    }
+  },
+  "order": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffff7cca23e9c44edb49aed63690216cc2728dc58f552378c292ab5844f3",
+  "cofactor": "0x04"
+}

@@ -1,0 +1,52 @@
+{
+  "name": "sect131r2",
+  "desc": "",
+  "oid": "1.3.132.0.23",
+  "form": "Weierstrass",
+  "field": {
+    "type": "Binary",
+    "bits": 131,
+    "degree": 131,
+    "poly": [
+      {
+        "coeff": "0x01",
+        "power": 131
+      },
+      {
+        "coeff": "0x01",
+        "power": 8
+      },
+      {
+        "coeff": "0x01",
+        "power": 3
+      },
+      {
+        "coeff": "0x01",
+        "power": 2
+      },
+      {
+        "coeff": "0x01",
+        "power": 0
+      }
+    ],
+    "basis": "poly"
+  },
+  "params": {
+    "a": {
+      "raw": "0x03e5a88919d7cafcbf415f07c2176573b2"
+    },
+    "b": {
+      "raw": "0x04b8266a46c55657ac734ce38f018f2192"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0x0356dcd8f2f95031ad652d23951bb366a8"
+    },
+    "y": {
+      "raw": "0x0648f06d867940a5366d9e265de9eb240f"
+    }
+  },
+  "order": "0x0400000000000000016954a233049ba98f",
+  "cofactor": "0x2"
+}

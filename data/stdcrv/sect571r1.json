@@ -1,0 +1,64 @@
+{
+  "name": "sect571r1",
+  "desc": "",
+  "oid": "1.3.132.0.39",
+  "form": "Weierstrass",
+  "field": {
+    "type": "Binary",
+    "bits": 571,
+    "degree": 571,
+    "poly": [
+      {
+        "coeff": "0x01",
+        "power": 571
+      },
+      {
+        "coeff": "0x01",
+        "power": 10
+      },
+      {
+        "coeff": "0x01",
+        "power": 5
+      },
+      {
+        "coeff": "0x01",
+        "power": 2
+      },
+      {
+        "coeff": "0x01",
+        "power": 0
+      }
+    ],
+    "basis": "poly"
+  },
+  "params": {
+    "a": {
+      "raw": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001"
+    },
+    "b": {
+      "raw": "0x02f40e7e2221f295de297117b7f3d62f5c6a97ffcb8ceff1cd6ba8ce4a9a18ad84ffabbd8efa59332be7ad6756a66e294afd185a78ff12aa520e4de739baca0c7ffeff7f2955727a"
+    }
+  },
+  "generator": {
+    "x": {
+      "raw": "0x0303001d34b856296c16c0d40d3cd7750a93d1d2955fa80aa5f40fc8db7b2abdbde53950f4c0d293cdd711a35b67fb1499ae60038614f1394abfa3b4c850d927e1e7769c8eec2d19"
+    },
+    "y": {
+      "raw": "0x037bf27342da639b6dccfffeb73d69d78c6c27a6009cbbca1980f8533921e8a684423e43bab08a576291af8f461bb2a8b3531d2f0485c19b16e2f1516e23dd3c1a4827af1b8ac15b"
+    }
+  },
+  "order": "0x03ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe661ce18ff55987308059b186823851ec7dd9ca1161de93d5174d66e8382e9bb2fe84e47",
+  "cofactor": "0x2",
+  "aliases": [
+    "nist/B-571",
+    "x963/ansit571r1"
+  ],
+  "characteristics": {
+    "seed": "2AA058F73A0E33AB486B0F610410C53A7F132310",
+    "j_invariant": "4214501753546941913223695905024629172637342244349568219783929342383426637975668846684512012478218604779111370893214803288669006084397110899225485839234972840008396689070376",
+    "anomalous": false,
+    "discriminant": "2853329245261343535560086964181551296889298776106832980891560850944180011701123307905326019642652653533003482753023669016842884108172514870944140611113679225347419720217210",
+    "supersingular": false,
+    "trace_of_frobenius": "99534385013609758659469819150465382236412396452349171016760770327496674607579419075443"
+  }
+}
