@@ -91,7 +91,7 @@ public class ProgramMainGui extends MainGui {
                 JPanel aes = new JPanel();
                 AES_CONTENT = new JPanel();
                 AES_CONTENT.setBorder(null);
-                JRadioButton pivfh = new JRadioButton("Password, IV from hash"),
+                JRadioButton pivfh = new JRadioButton("Password, IV From Hash"),
                         piv = new JRadioButton("Password, IV"),
                         kiv = new JRadioButton("Key, IV"),
                         pniv = new JRadioButton("Password, No IV"),
@@ -533,14 +533,16 @@ public class ProgramMainGui extends MainGui {
                                             )
                                     ).addGroup(
                                             main.createSequentialGroup().addComponent(
+                                                    gen, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                            ).addGap(
+                                                    DendroFactory.SMALL_GAP, DendroFactory.SMALL_GAP, Short.MAX_VALUE
+                                            ).addComponent(
                                                     sign, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                                             ).addGap(
                                                     DendroFactory.SMALL_GAP, DendroFactory.SMALL_GAP, Short.MAX_VALUE
                                             ).addComponent(
                                                     verify, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                                             )
-                                    ).addComponent(
-                                            gen, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                                     )
                             ).addContainerGap()
                     );
@@ -601,12 +603,12 @@ public class ProgramMainGui extends MainGui {
                                     )
                             ).addGap(DendroFactory.MEDIUM_GAP).addGroup(
                                     main.createParallelGroup(GroupLayout.Alignment.CENTER).addComponent(
+                                            gen, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
                                             sign, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                                     ).addComponent(
                                             verify, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                                     )
-                            ).addComponent(
-                                    gen, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                             ).addContainerGap()
                     );
                 }
@@ -740,7 +742,7 @@ public class ProgramMainGui extends MainGui {
     private void aesButtonChanged() {
         int x = getLocation().x + getWidth() / 2, y = getLocation().y + getHeight() / 2;
         switch (getSelectedRadio()) {
-            case "Password, IV from hash" -> setAesPIVfH();
+            case "Password, IV From Hash" -> setAesPIVfH();
             case "Password, IV" -> setAesPIV();
             case "Key, IV" -> setAesKIV();
             case "Password, No IV" -> setAesPnIV();

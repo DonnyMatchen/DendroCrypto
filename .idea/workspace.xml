@@ -9,8 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b24a71ca-022e-4d4f-81a2-a17d43395b76" name="Changes" comment="add defiend curves">
+    <list default="true" id="b24a71ca-022e-4d4f-81a2-a17d43395b76" name="Changes" comment="ensured that logs won't sync">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/Tabs.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/documents/Tabs.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/ProgramMainGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/ProgramMainGui.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683243302443</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ensured that logs won't sync">
+      <created>1683253032198</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683253032198</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +154,7 @@
     <MESSAGE value="got the build set up properly" />
     <MESSAGE value="total overhaul" />
     <MESSAGE value="add defiend curves" />
-    <option name="LAST_COMMIT_MESSAGE" value="add defiend curves" />
+    <MESSAGE value="ensured that logs won't sync" />
+    <option name="LAST_COMMIT_MESSAGE" value="ensured that logs won't sync" />
   </component>
 </project>
