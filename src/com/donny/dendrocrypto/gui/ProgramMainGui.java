@@ -559,15 +559,9 @@ public class ProgramMainGui extends MainGui {
                             }
                             BigInteger res = Functions.modExp(bN, eN, nN);
                             switch ((String) radix.getSelectedItem()) {
-                                case "Base64" -> {
-                                    result.setText(Base64.getEncoder().encodeToString(res.toByteArray()));
-                                }
-                                case "Hexadecimal" -> {
-                                    result.setText(res.toString(16));
-                                }
-                                case "Decimal" -> {
-                                    result.setText(res.toString());
-                                }
+                                case "Base64" -> result.setText(Base64.getEncoder().encodeToString(res.toByteArray()));
+                                case "Hexadecimal" -> result.setText(res.toString(16));
+                                case "Decimal" -> result.setText(res.toString());
                             }
                         } catch (IllegalArgumentException ex) {
                             CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Fields must be a number matching the radix");
@@ -676,6 +670,7 @@ public class ProgramMainGui extends MainGui {
         pack();
         setLocation(x - getWidth() / 2, y - getHeight() / 2);
     }
+
     private void eccButtonChanged() {
         int x = getLocation().x + getWidth() / 2, y = getLocation().y + getHeight() / 2;
         switch (getSelectedEccRadio()) {
@@ -1315,7 +1310,7 @@ public class ProgramMainGui extends MainGui {
                     y = fromRadixInput(ECC_Y, ECC_RADIX),
                     r = fromRadixInput(ECC_R, ECC_RADIX),
                     s = fromRadixInput(ECC_S, ECC_RADIX);
-            if(x != null && y != null && r != null && s != null) {
+            if (x != null && y != null && r != null && s != null) {
                 DefinedCurve curve = Registry.get((String) ECC_DC.getSelectedItem());
                 ECPoint pub = makeECPoint(x, y, curve);
                 if (pub != null) {
@@ -1454,11 +1449,11 @@ public class ProgramMainGui extends MainGui {
                     y = fromRadixInput(ECC_Y, ECC_RADIX),
                     z = fromRadixInput(ECC_Z, ECC_RADIX);
 
-            if(x != null && y != null && z != null) {
+            if (x != null && y != null && z != null) {
                 ECPoint start = makeECPoint(x, y, Registry.get((String) ECC_DC.getSelectedItem()));
-                if(start != null) {
+                if (start != null) {
                     ECPoint end = start.multiply(z);
-                    if(end == null) {
+                    if (end == null) {
                         ECC_X2.setText("POINT AT INFINITY");
                         ECC_Y2.setText("POINT AT INFINITY");
                     } else {
@@ -1567,7 +1562,7 @@ public class ProgramMainGui extends MainGui {
         JButton unpack = DendroFactory.getButton("Unpack");
         unpack.addActionListener(event -> {
             BigInteger packed = fromRadixInput(ECC_P, ECC_RADIX);
-            if(packed != null) {
+            if (packed != null) {
                 DefinedCurve curve = Registry.get((String) ECC_DC.getSelectedItem());
                 try {
                     BigInteger[] coordinates = curve.getPackingHandler().unpack(packed, curve.E);
@@ -1583,7 +1578,7 @@ public class ProgramMainGui extends MainGui {
         pack.addActionListener(event -> {
             BigInteger x = fromRadixInput(ECC_X, ECC_RADIX),
                     y = fromRadixInput(ECC_Y, ECC_RADIX);
-            if(x != null && y != null) {
+            if (x != null && y != null) {
                 DefinedCurve curve = Registry.get((String) ECC_DC.getSelectedItem());
                 toRadixOutput(ECC_P, ECC_RADIX, curve.getPackingHandler().pack(makeECPoint(x, y, curve)));
             }
@@ -1709,15 +1704,9 @@ public class ProgramMainGui extends MainGui {
     private void toRadixOutput(JTextArea target, JComboBox<String> radix, BigInteger input) {
         String text = "";
         switch ((String) radix.getSelectedItem()) {
-            case "Base64" -> {
-                text = Base64.getEncoder().encodeToString(input.toByteArray());
-            }
-            case "Hexadecimal" -> {
-                text = input.toString(16);
-            }
-            case "Decimal" -> {
-                text = input.toString();
-            }
+            case "Base64" -> text = Base64.getEncoder().encodeToString(input.toByteArray());
+            case "Hexadecimal" -> text = input.toString(16);
+            case "Decimal" -> text = input.toString();
         }
         target.setText(text);
     }
