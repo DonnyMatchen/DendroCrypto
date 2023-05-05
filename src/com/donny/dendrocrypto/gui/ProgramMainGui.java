@@ -25,6 +25,7 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.math.BigInteger;
@@ -653,8 +654,8 @@ public class ProgramMainGui extends MainGui {
 
             add(back);
             pack();
-            int x = getLocation().x + getWidth() / 2, y = getLocation().y + getHeight() / 2;
-            setLocation(x - getWidth() / 2, y - getHeight() / 2);
+            Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+            setLocation(d.width / 2 - getWidth() / 2, d.height / 2 - getHeight() / 2);
         }
     }
 

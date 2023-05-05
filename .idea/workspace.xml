@@ -9,8 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b24a71ca-022e-4d4f-81a2-a17d43395b76" name="Changes" comment="reworked ECDSA tab to ECC tab with ECDH and Unpacking functionality, and removed JSeparators">
-      <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/ProgramMainGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/ProgramMainGui.java" afterDir="false" />
+    <list default="true" id="b24a71ca-022e-4d4f-81a2-a17d43395b76" name="Changes" comment="cleanup">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683305026368</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="cleanup">
+      <created>1683305209265</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683305209265</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,6 +184,7 @@
     <MESSAGE value="fixed visuals, updated documentation" />
     <MESSAGE value="added ModExp tab" />
     <MESSAGE value="reworked ECDSA tab to ECC tab with ECDH and Unpacking functionality, and removed JSeparators" />
-    <option name="LAST_COMMIT_MESSAGE" value="reworked ECDSA tab to ECC tab with ECDH and Unpacking functionality, and removed JSeparators" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
 </project>
