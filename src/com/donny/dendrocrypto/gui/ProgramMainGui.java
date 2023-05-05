@@ -13,6 +13,7 @@ import com.donny.dendroecc.crypto.Registry;
 import com.donny.dendroecc.crypto.Signature;
 import com.donny.dendroecc.curves.*;
 import com.donny.dendroecc.points.*;
+import com.donny.dendroecc.util.Functions;
 import com.donny.dendroroot.gui.MainGui;
 import com.donny.dendroroot.gui.customswing.AlertGui;
 import com.donny.dendroroot.gui.customswing.DendroFactory;
@@ -352,8 +353,8 @@ public class ProgramMainGui extends MainGui {
                             String r = "", s = "";
                             switch ((String) radix.getSelectedItem()) {
                                 case "Base64" -> {
-                                    r = new String(Base64.getEncoder().encode(sig.R.toByteArray()), DendroCrypto.CHARSET);
-                                    s = new String(Base64.getEncoder().encode(sig.S.toByteArray()), DendroCrypto.CHARSET);
+                                    r = Base64.getEncoder().encodeToString(sig.R.toByteArray());
+                                    s = Base64.getEncoder().encodeToString(sig.S.toByteArray());
                                 }
                                 case "Hexadecimal" -> {
                                     r = sig.R.toString(16);
@@ -466,9 +467,9 @@ public class ProgramMainGui extends MainGui {
                     ECCKeyPair pair = Registry.get((String) defCurve.getSelectedItem()).generateKeyPair();
                     switch ((String) radix.getSelectedItem()) {
                         case "Base64" -> {
-                            privateKey.setText(new String(Base64.getEncoder().encode(pair.PRIVATE.toByteArray()), DendroCrypto.CHARSET));
-                            publicX.setText(new String(Base64.getEncoder().encode(pair.PUBLIC.X.toByteArray()), DendroCrypto.CHARSET));
-                            publicY.setText(new String(Base64.getEncoder().encode(pair.PUBLIC.Y.toByteArray()), DendroCrypto.CHARSET));
+                            privateKey.setText(Base64.getEncoder().encodeToString(pair.PRIVATE.toByteArray()));
+                            publicX.setText(Base64.getEncoder().encodeToString(pair.PUBLIC.X.toByteArray()));
+                            publicY.setText(Base64.getEncoder().encodeToString(pair.PUBLIC.Y.toByteArray()));
                         }
                         case "Hexadecimal" -> {
                             privateKey.setText(pair.PRIVATE.toString(16));
@@ -732,6 +733,164 @@ public class ProgramMainGui extends MainGui {
                 }
 
                 back.addTab("Random", rand);
+            }
+
+            //ModExp
+            {
+                JPanel modExp = new JPanel();
+                JLabel a = new JLabel("Radix");
+                JLabel b = new JLabel("Base");
+                JLabel c = new JLabel("Exponent");
+                JLabel d = new JLabel("Modulus");
+                JLabel e = new JLabel("Result");
+
+                JComboBox<String> radix = new JComboBox<>();
+                radix.addItem("Base64");
+                radix.addItem("Hexadecimal");
+                radix.addItem("Decimal");
+                JScrollPane baseScroll = DendroFactory.getLongField();
+                JTextArea base = (JTextArea) baseScroll.getViewport().getView();
+                JScrollPane exponentScroll = DendroFactory.getLongField();
+                JTextArea exponent = (JTextArea) exponentScroll.getViewport().getView();
+                JScrollPane modulusScroll = DendroFactory.getLongField();
+                JTextArea modulus = (JTextArea) modulusScroll.getViewport().getView();
+                JScrollPane resultScroll = DendroFactory.getLongField();
+                JTextArea result = (JTextArea) resultScroll.getViewport().getView();
+                result.setEditable(false);
+                result.setBackground(DendroFactory.DISABLED);
+                result.addMouseListener(new MouseAdapter() {
+                    public void mouseClicked(MouseEvent evt) {
+                        result.selectAll();
+                    }
+                });
+                JButton calc = new JButton("Calculate");
+                calc.addActionListener(event -> {
+                    BigInteger bN = null, eN = null, nN = null;
+                    String bS = null, eS = null, nS = null;
+                    try {
+                        bS = Validation.validateString(base);
+                        eS = Validation.validateString(exponent);
+                        nS = Validation.validateString(modulus);
+                    } catch (ValidationFailedException ex) {
+                        CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Fields cannot be empty");
+                    }
+                    if (bS != null && eS != null && nS != null) {
+                        try {
+                            switch ((String) radix.getSelectedItem()) {
+                                case "Base64" -> {
+                                    bN = new BigInteger(Base64.getDecoder().decode(bS));
+                                    eN = new BigInteger(Base64.getDecoder().decode(eS));
+                                    nN = new BigInteger(Base64.getDecoder().decode(nS));
+                                }
+                                case "Hexadecimal" -> {
+                                    bN = new BigInteger(bS, 16);
+                                    eN = new BigInteger(eS, 16);
+                                    nN = new BigInteger(nS, 16);
+                                }
+                                case "Decimal" -> {
+                                    bN = new BigInteger(bS);
+                                    eN = new BigInteger(eS);
+                                    nN = new BigInteger(nS);
+                                }
+                            }
+                            BigInteger res = Functions.modExp(bN, eN, nN);
+                            switch ((String) radix.getSelectedItem()) {
+                                case "Base64" -> {
+                                    result.setText(Base64.getEncoder().encodeToString(res.toByteArray()));
+                                }
+                                case "Hexadecimal" -> {
+                                    result.setText(res.toString(16));
+                                }
+                                case "Decimal" -> {
+                                    result.setText(res.toString());
+                                }
+                            }
+                        } catch (IllegalArgumentException ex) {
+                            CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Fields must be a number matching the radix");
+                            if (bN == null) {
+                                base.setBackground(DendroFactory.WRONG);
+                            } else if (eN == null) {
+                                exponent.setBackground(DendroFactory.WRONG);
+                            } else {
+                                modulus.setBackground(DendroFactory.WRONG);
+                            }
+                        }
+                    }
+                });
+                //Group Layout
+                {
+                    GroupLayout main = new GroupLayout(modExp);
+                    modExp.setLayout(main);
+                    main.setHorizontalGroup(
+                            main.createSequentialGroup().addContainerGap().addGroup(
+                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(
+                                            main.createSequentialGroup().addGroup(
+                                                    main.createParallelGroup(GroupLayout.Alignment.TRAILING).addComponent(
+                                                            a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                                    ).addComponent(
+                                                            b, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                                    ).addComponent(
+                                                            c, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                                    ).addComponent(
+                                                            d, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                                    ).addComponent(
+                                                            e, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                                    )
+                                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                                            radix, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                                    ).addComponent(
+                                                            baseScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                                    ).addComponent(
+                                                            exponentScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                                    ).addComponent(
+                                                            modulusScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                                    ).addComponent(
+                                                            resultScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                                    )
+                                            )
+                                    ).addComponent(
+                                            calc, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    )
+                            ).addContainerGap()
+                    );
+                    main.setVerticalGroup(
+                            main.createSequentialGroup().addContainerGap().addGroup(
+                                    main.createParallelGroup(GroupLayout.Alignment.CENTER).addComponent(
+                                            a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            radix, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    )
+                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                            b, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            baseScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    )
+                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                            c, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            exponentScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    )
+                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                            d, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            modulusScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    )
+                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                            e, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            resultScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    )
+                            ).addGap(DendroFactory.MEDIUM_GAP).addComponent(
+                                    calc, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addContainerGap()
+                    );
+                }
+                back.addTab("Mod Exp", modExp);
             }
 
             add(back);
