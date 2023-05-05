@@ -3,6 +3,7 @@
 * now uses DendroECC
 * overhaul of nested JTabbedPanes
 * ECDSA implemented
+* ECDH implemented
 
 ## v0.1.0
 * initial commit

@@ -37,14 +37,22 @@ import java.util.Enumeration;
 
 public class ProgramMainGui extends MainGui {
     private final Instance CURRENT_INSTANCE;
-    private final ButtonGroup AES_GROUP = new ButtonGroup();
-    private final JPanel AES_CONTENT;
+    private final ButtonGroup AES_GROUP = new ButtonGroup(), ECC_GROUP = new ButtonGroup();
+    private final JPanel AES_CONTENT, ECC_CONTENT;
     private final IOPane AES_IN, AES_OUT;
     private final JPasswordField AES_PASS;
     private final HexField AES_KEY, AES_IV;
     private final JComboBox<Integer> AES_KEYSIZE, AES_IV_INDEX;
-    private final JComboBox<String> AES_RADIX;
+    private final JComboBox<String> AES_RADIX, ECC_FORM, ECC_DC, ECC_RADIX;
     private final JComboBox<Aes> AES_MODE_IV, AES_MODE_NIV;
+    private final JScrollPane ECC_X_SCROLL, ECC_Y_SCROLL, ECC_Z_SCROLL,
+            ECC_M_SCROLL, ECC_R_SCROLL, ECC_S_SCROLL,
+            ECC_X2_SCROLL, ECC_Y2_SCROLL,
+            ECC_P_SCROLL;
+    private final JTextArea ECC_X, ECC_Y, ECC_Z,
+            ECC_M, ECC_R, ECC_S,
+            ECC_X2, ECC_Y2,
+            ECC_P;
 
     public ProgramMainGui(Instance curInst) {
         super("Dendrogram Cryptography", curInst);
@@ -83,7 +91,38 @@ public class ProgramMainGui extends MainGui {
                     AES_MODE_NIV.addItem(handler);
                 }
 
+                ECC_FORM = new JComboBox<>();
+                ECC_FORM.addItem("Weierstrass Prime");
+                ECC_FORM.addItem("Weierstrass Binary");
+                ECC_FORM.addItem("Twisted Edwards");
+                ECC_FORM.addItem("Montgomery");
+                ECC_FORM.addItem("Edwards");
+                ECC_DC = new JComboBox<>();
+                ECC_FORM.addActionListener(event -> setEccDefCrv());
+                setEccDefCrv();
+                ECC_RADIX = new JComboBox<>();
+                ECC_RADIX.addItem("Base64");
+                ECC_RADIX.addItem("Hexadecimal");
+                ECC_RADIX.addItem("Decimal");
 
+                ECC_X_SCROLL = DendroFactory.getLongField();
+                ECC_X = (JTextArea) ECC_X_SCROLL.getViewport().getView();
+                ECC_Y_SCROLL = DendroFactory.getLongField();
+                ECC_Y = (JTextArea) ECC_Y_SCROLL.getViewport().getView();
+                ECC_Z_SCROLL = DendroFactory.getLongField();
+                ECC_Z = (JTextArea) ECC_Z_SCROLL.getViewport().getView();
+                ECC_M_SCROLL = DendroFactory.getScrollField();
+                ECC_M = (JTextArea) ECC_M_SCROLL.getViewport().getView();
+                ECC_R_SCROLL = DendroFactory.getLongField();
+                ECC_R = (JTextArea) ECC_R_SCROLL.getViewport().getView();
+                ECC_S_SCROLL = DendroFactory.getLongField();
+                ECC_S = (JTextArea) ECC_S_SCROLL.getViewport().getView();
+                ECC_X2_SCROLL = DendroFactory.getLongField();
+                ECC_X2 = (JTextArea) ECC_X2_SCROLL.getViewport().getView();
+                ECC_Y2_SCROLL = DendroFactory.getLongField();
+                ECC_Y2 = (JTextArea) ECC_Y2_SCROLL.getViewport().getView();
+                ECC_P_SCROLL = DendroFactory.getLongField();
+                ECC_P = (JTextArea) ECC_P_SCROLL.getViewport().getView();
             }
 
             JTabbedPane back = new JTabbedPane();
@@ -111,8 +150,6 @@ public class ProgramMainGui extends MainGui {
                 pivfh.setSelected(true);
                 aesButtonChanged();
 
-                JSeparator sep = new JSeparator();
-
                 //Group Layout
                 {
                     GroupLayout main = new GroupLayout(aes);
@@ -130,8 +167,6 @@ public class ProgramMainGui extends MainGui {
                                     ).addComponent(
                                             kniv, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                                     ).addComponent(
-                                            sep
-                                    ).addComponent(
                                             AES_CONTENT, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                                     )
                             ).addContainerGap()
@@ -147,9 +182,7 @@ public class ProgramMainGui extends MainGui {
                                     pniv, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                             ).addGap(DendroFactory.SMALL_GAP).addComponent(
                                     kniv, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                            ).addGap(DendroFactory.SMALL_GAP).addComponent(
-                                    sep
-                            ).addGap(DendroFactory.SMALL_GAP).addComponent(
+                            ).addGap(DendroFactory.LARGE_GAP).addComponent(
                                     AES_CONTENT, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                             ).addContainerGap()
                     );
@@ -258,231 +291,24 @@ public class ProgramMainGui extends MainGui {
                 JLabel a = new JLabel("Curve Form");
                 JLabel b = new JLabel("Defined Curve");
                 JLabel c = new JLabel("Radix");
-                JLabel d = new JLabel("message");
-                JLabel e = new JLabel("Private Key");
-                JLabel f = new JLabel("Public Key (X)");
-                JLabel g = new JLabel("Public Key (Y)");
-                JLabel h = new JLabel("Signature (R)");
-                JLabel i = new JLabel("Signature (S)");
 
-                JComboBox<String> form = new JComboBox<>();
-                form.addItem("Weierstrass Prime");
-                form.addItem("Weierstrass Binary");
-                form.addItem("Twisted Edwards");
-                form.addItem("Montgomery");
-                form.addItem("Edwards");
-                JComboBox<String> defCurve = new JComboBox<>();
-                form.addActionListener(event -> {
-                    switch ((String) form.getSelectedItem()) {
-                        case "Weierstrass Prime" -> {
-                            defCurve.removeAllItems();
-                            for (String curve : DendroCrypto.WEIERSTRASS_PRIME) {
-                                defCurve.addItem(curve);
-                            }
-                        }
-                        case "Weierstrass Binary" -> {
-                            defCurve.removeAllItems();
-                            for (String curve : DendroCrypto.WEIERSTRASS_BINARY) {
-                                defCurve.addItem(curve);
-                            }
-                        }
-                        case "Twisted Edwards" -> {
-                            defCurve.removeAllItems();
-                            for (String curve : DendroCrypto.TWISTED_EDWARDS) {
-                                defCurve.addItem(curve);
-                            }
-                        }
-                        case "Montgomery" -> {
-                            defCurve.removeAllItems();
-                            for (String curve : DendroCrypto.MONTGOMERY) {
-                                defCurve.addItem(curve);
-                            }
-                        }
-                        case "Edwards" -> {
-                            defCurve.removeAllItems();
-                            for (String curve : DendroCrypto.EDWARDS) {
-                                defCurve.addItem(curve);
-                            }
-                        }
-                    }
-                });
-                defCurve.removeAllItems();
-                for (String curve : DendroCrypto.WEIERSTRASS_PRIME) {
-                    defCurve.addItem(curve);
+                ECC_CONTENT = new JPanel();
+                ECC_CONTENT.setBorder(null);
+
+                JRadioButton ecdsa = new JRadioButton("ECDSA"),
+                        ecdh = new JRadioButton("ECDH"),
+                        pack = new JRadioButton("Unpacking");
+                ECC_GROUP.add(ecdsa);
+                ECC_GROUP.add(ecdh);
+                ECC_GROUP.add(pack);
+
+                Enumeration<AbstractButton> radio = ECC_GROUP.getElements();
+                while (radio.hasMoreElements()) {
+                    radio.nextElement().addActionListener(event -> eccButtonChanged());
                 }
-                JComboBox<String> radix = new JComboBox<>();
-                radix.addItem("Base64");
-                radix.addItem("Hexadecimal");
-                radix.addItem("Decimal");
-                JScrollPane messageScroll = DendroFactory.getScrollField();
-                JTextArea message = (JTextArea) messageScroll.getViewport().getView();
-                JScrollPane privateScroll = DendroFactory.getLongField();
-                JTextArea privateKey = (JTextArea) privateScroll.getViewport().getView();
-                JScrollPane publicXScroll = DendroFactory.getLongField();
-                JTextArea publicX = (JTextArea) publicXScroll.getViewport().getView();
-                JScrollPane publicYScroll = DendroFactory.getLongField();
-                JTextArea publicY = (JTextArea) publicYScroll.getViewport().getView();
-                JScrollPane sigRScroll = DendroFactory.getLongField();
-                JTextArea sigR = (JTextArea) sigRScroll.getViewport().getView();
-                JScrollPane sigSScroll = DendroFactory.getLongField();
-                JTextArea sigS = (JTextArea) sigSScroll.getViewport().getView();
 
-                JButton sign = DendroFactory.getButton("Sign");
-                sign.addActionListener(event -> {
-                    BigInteger priv = null;
-                    try {
-                        String privateRaw = Validation.validateString(privateKey);
-                        switch ((String) radix.getSelectedItem()) {
-                            case "Base64" -> priv = new BigInteger(Base64.getDecoder().decode(privateRaw));
-                            case "Hexadecimal" -> priv = new BigInteger(privateRaw, 16);
-                            case "Decimal" -> priv = new BigInteger(privateRaw);
-                        }
-                    } catch (ValidationFailedException ex) {
-                        CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Private Key must be a number matching the radix");
-                    } catch (IllegalArgumentException ex) {
-                        CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Private Key must be a number matching the radix");
-                        privateKey.setBackground(DendroFactory.WRONG);
-                    }
-
-                    if (priv != null) {
-                        try {
-                            Signature sig = Registry.get((String) defCurve.getSelectedItem()).sign(
-                                    message.getText().getBytes(DendroCrypto.CHARSET),
-                                    priv
-                            );
-                            String r = "", s = "";
-                            switch ((String) radix.getSelectedItem()) {
-                                case "Base64" -> {
-                                    r = Base64.getEncoder().encodeToString(sig.R.toByteArray());
-                                    s = Base64.getEncoder().encodeToString(sig.S.toByteArray());
-                                }
-                                case "Hexadecimal" -> {
-                                    r = sig.R.toString(16);
-                                    s = sig.S.toString(16);
-                                }
-                                case "Decimal" -> {
-                                    r = sig.R.toString();
-                                    s = sig.S.toString();
-                                }
-                            }
-                            sigR.setText(r);
-                            sigS.setText(s);
-                        } catch (NoSuchAlgorithmException ex) {
-                            CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Your system does not support SHA-256");
-                            new AlertGui(this, "Your system does not support SHA-256", CURRENT_INSTANCE).setVisible(true);
-                        }
-                    }
-                });
-                JButton verify = DendroFactory.getButton("Verify");
-                verify.addActionListener(event -> {
-                    BigInteger x = null, y = null;
-                    String xRaw = null, yRaw;
-                    try {
-                        xRaw = Validation.validateString(publicX);
-                        yRaw = Validation.validateString(publicY);
-                        switch ((String) radix.getSelectedItem()) {
-                            case "Base64" -> {
-                                x = new BigInteger(Base64.getDecoder().decode(xRaw));
-                                y = new BigInteger(Base64.getDecoder().decode(yRaw));
-                            }
-                            case "Hexadecimal" -> {
-                                x = new BigInteger(xRaw, 16);
-                                y = new BigInteger(yRaw, 16);
-                            }
-                            case "Decimal" -> {
-                                x = new BigInteger(xRaw);
-                                y = new BigInteger(yRaw);
-                            }
-                        }
-                    } catch (ValidationFailedException ex) {
-                        CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Public Key must be a number matching the radix");
-                    } catch (IllegalArgumentException ex) {
-                        CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Public Key must be a number matching the radix");
-                        if (xRaw == null) {
-                            publicX.setBackground(DendroFactory.WRONG);
-                        } else {
-                            publicY.setBackground(DendroFactory.WRONG);
-                        }
-                    }
-
-                    BigInteger r = null, s = null;
-                    String rRaw = null, sRaw;
-                    try {
-                        rRaw = Validation.validateString(sigR);
-                        sRaw = Validation.validateString(sigS);
-                        switch ((String) radix.getSelectedItem()) {
-                            case "Base64" -> {
-                                r = new BigInteger(Base64.getDecoder().decode(rRaw));
-                                s = new BigInteger(Base64.getDecoder().decode(sRaw));
-                            }
-                            case "Hexadecimal" -> {
-                                r = new BigInteger(rRaw, 16);
-                                s = new BigInteger(sRaw, 16);
-                            }
-                            case "Decimal" -> {
-                                r = new BigInteger(rRaw);
-                                s = new BigInteger(sRaw);
-                            }
-                        }
-                    } catch (ValidationFailedException ex) {
-                        CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Signature must be a number matching the radix");
-                    } catch (IllegalArgumentException ex) {
-                        CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Signature must be a number matching the radix");
-                        if (rRaw == null) {
-                            sigR.setBackground(DendroFactory.WRONG);
-                        } else {
-                            sigS.setBackground(DendroFactory.WRONG);
-                        }
-                    }
-
-                    DefinedCurve curve = Registry.get((String) defCurve.getSelectedItem());
-                    ECPoint pub = null;
-                    if (curve.E instanceof WeierstrassPrime) {
-                        pub = new WpECPoint(x, y, (WeierstrassPrime) curve.E);
-                    } else if (curve.E instanceof WeierstrassBinary) {
-                        pub = new WbECPoint(x, y, (WeierstrassBinary) curve.E);
-                    } else if (curve.E instanceof TwistedEdwards) {
-                        pub = new TeECPoint(x, y, (TwistedEdwards) curve.E);
-                    } else if (curve.E instanceof Montgomery) {
-                        pub = new MECPoint(x, y, (Montgomery) curve.E);
-                    } else if (curve.E instanceof Edwards) {
-                        pub = new EdECPoint(x, y, (Edwards) curve.E);
-                    }
-                    if (pub != null) {
-                        try {
-                            boolean cor = curve.verifySignature(
-                                    message.getText().getBytes(DendroCrypto.CHARSET),
-                                    new Signature(r, s),
-                                    pub
-                            );
-                            new AlertGui(this, "Signature " + (cor ? "is Valid" : "is not Valid"), CURRENT_INSTANCE).setVisible(true);
-                        } catch (NoSuchAlgorithmException ex) {
-                            CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Your system does not support SHA-256");
-                            new AlertGui(this, "Your system does not support SHA-256", CURRENT_INSTANCE).setVisible(true);
-                        }
-                    }
-                });
-                JButton gen = DendroFactory.getButton("Generate Keypair");
-                gen.addActionListener(event -> {
-                    ECCKeyPair pair = Registry.get((String) defCurve.getSelectedItem()).generateKeyPair();
-                    switch ((String) radix.getSelectedItem()) {
-                        case "Base64" -> {
-                            privateKey.setText(Base64.getEncoder().encodeToString(pair.PRIVATE.toByteArray()));
-                            publicX.setText(Base64.getEncoder().encodeToString(pair.PUBLIC.X.toByteArray()));
-                            publicY.setText(Base64.getEncoder().encodeToString(pair.PUBLIC.Y.toByteArray()));
-                        }
-                        case "Hexadecimal" -> {
-                            privateKey.setText(pair.PRIVATE.toString(16));
-                            publicX.setText(pair.PUBLIC.X.toString(16));
-                            publicY.setText(pair.PUBLIC.Y.toString(16));
-                        }
-                        case "Decimal" -> {
-                            privateKey.setText(pair.PRIVATE.toString());
-                            publicX.setText(pair.PUBLIC.X.toString());
-                            publicY.setText(pair.PUBLIC.Y.toString());
-                        }
-                    }
-                });
+                ecdsa.setSelected(true);
+                eccButtonChanged();
 
                 //Group Layout
                 {
@@ -490,7 +316,7 @@ public class ProgramMainGui extends MainGui {
                     ecc.setLayout(main);
                     main.setHorizontalGroup(
                             main.createSequentialGroup().addContainerGap().addGroup(
-                                    main.createParallelGroup(GroupLayout.Alignment.CENTER).addGroup(
+                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(
                                             main.createSequentialGroup().addGroup(
                                                     main.createParallelGroup(GroupLayout.Alignment.TRAILING).addComponent(
                                                             a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
@@ -498,52 +324,24 @@ public class ProgramMainGui extends MainGui {
                                                             b, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                                                     ).addComponent(
                                                             c, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                                    ).addComponent(
-                                                            d, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                                    ).addComponent(
-                                                            e, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                                    ).addComponent(
-                                                            f, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                                    ).addComponent(
-                                                            g, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                                    ).addComponent(
-                                                            h, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                                    ).addComponent(
-                                                            i, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                                                     )
-                                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                                            ).addGap(DendroFactory.MEDIUM_GAP).addGroup(
                                                     main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
-                                                            form, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                                            ECC_FORM, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                                                     ).addComponent(
-                                                            defCurve, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                                            ECC_DC, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                                                     ).addComponent(
-                                                            radix, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
-                                                    ).addComponent(
-                                                            messageScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
-                                                    ).addComponent(
-                                                            privateScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
-                                                    ).addComponent(
-                                                            publicXScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
-                                                    ).addComponent(
-                                                            publicYScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
-                                                    ).addComponent(
-                                                            sigRScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
-                                                    ).addComponent(
-                                                            sigSScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                                            ECC_RADIX, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                                                     )
                                             )
-                                    ).addGroup(
-                                            main.createSequentialGroup().addComponent(
-                                                    gen, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                            ).addGap(
-                                                    DendroFactory.SMALL_GAP, DendroFactory.SMALL_GAP, Short.MAX_VALUE
-                                            ).addComponent(
-                                                    sign, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                            ).addGap(
-                                                    DendroFactory.SMALL_GAP, DendroFactory.SMALL_GAP, Short.MAX_VALUE
-                                            ).addComponent(
-                                                    verify, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                            )
+                                    ).addComponent(
+                                            ecdsa, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            ecdh, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            pack, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            ECC_CONTENT, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                                     )
                             ).addContainerGap()
                     );
@@ -552,69 +350,35 @@ public class ProgramMainGui extends MainGui {
                                     main.createParallelGroup(GroupLayout.Alignment.CENTER).addComponent(
                                             a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                                     ).addComponent(
-                                            form, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                            ECC_FORM, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                                     )
                             ).addGap(DendroFactory.SMALL_GAP).addGroup(
                                     main.createParallelGroup(GroupLayout.Alignment.CENTER).addComponent(
                                             b, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                                     ).addComponent(
-                                            defCurve, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                            ECC_DC, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                                     )
                             ).addGap(DendroFactory.SMALL_GAP).addGroup(
                                     main.createParallelGroup(GroupLayout.Alignment.CENTER).addComponent(
                                             c, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                                     ).addComponent(
-                                            radix, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                            ECC_RADIX, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
                                     )
-                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
-                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
-                                            d, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                    ).addComponent(
-                                            messageScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
-                                    )
-                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
-                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
-                                            e, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                    ).addComponent(
-                                            privateScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                    )
-                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
-                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
-                                            f, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                    ).addComponent(
-                                            publicXScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                    )
-                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
-                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
-                                            g, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                    ).addComponent(
-                                            publicYScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                    )
-                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
-                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
-                                            h, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                    ).addComponent(
-                                            sigRScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                    )
-                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
-                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
-                                            i, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                    ).addComponent(
-                                            sigSScroll, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                    )
-                            ).addGap(DendroFactory.MEDIUM_GAP).addGroup(
-                                    main.createParallelGroup(GroupLayout.Alignment.CENTER).addComponent(
-                                            gen, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                    ).addComponent(
-                                            sign, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                    ).addComponent(
-                                            verify, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                                    )
+                            ).addGap(DendroFactory.MEDIUM_GAP).addComponent(
+                                    ecdsa, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addGap(DendroFactory.SMALL_GAP).addComponent(
+                                    ecdh, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addGap(DendroFactory.SMALL_GAP).addComponent(
+                                    pack, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addGap(DendroFactory.LARGE_GAP).addComponent(
+                                    ECC_CONTENT, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                             ).addContainerGap()
                     );
                 }
-                back.add("ECDSA", ecc);
+
+                back.add("ECC", ecc);
             }
+
 
             //Rand
             {
@@ -895,12 +659,14 @@ public class ProgramMainGui extends MainGui {
 
             add(back);
             pack();
+            int x = getLocation().x + getWidth() / 2, y = getLocation().y + getHeight() / 2;
+            setLocation(x - getWidth() / 2, y - getHeight() / 2);
         }
     }
 
     private void aesButtonChanged() {
         int x = getLocation().x + getWidth() / 2, y = getLocation().y + getHeight() / 2;
-        switch (getSelectedRadio()) {
+        switch (getSelectedAesRadio()) {
             case "Password, IV From Hash" -> setAesPIVfH();
             case "Password, IV" -> setAesPIV();
             case "Key, IV" -> setAesKIV();
@@ -910,9 +676,31 @@ public class ProgramMainGui extends MainGui {
         pack();
         setLocation(x - getWidth() / 2, y - getHeight() / 2);
     }
+    private void eccButtonChanged() {
+        int x = getLocation().x + getWidth() / 2, y = getLocation().y + getHeight() / 2;
+        switch (getSelectedEccRadio()) {
+            case "ECDSA" -> setEcDSA();
+            case "ECDH" -> setEcDH();
+            case "Unpacking" -> setEcPack();
+        }
+        pack();
+        setLocation(x - getWidth() / 2, y - getHeight() / 2);
+    }
 
-    private String getSelectedRadio() {
+    private String getSelectedAesRadio() {
         Enumeration<AbstractButton> radio = AES_GROUP.getElements();
+        while (radio.hasMoreElements()) {
+            AbstractButton button = radio.nextElement();
+
+            if (button.isSelected()) {
+                return button.getText();
+            }
+        }
+        return "";
+    }
+
+    private String getSelectedEccRadio() {
+        Enumeration<AbstractButton> radio = ECC_GROUP.getElements();
         while (radio.hasMoreElements()) {
             AbstractButton button = radio.nextElement();
 
@@ -1012,8 +800,6 @@ public class ProgramMainGui extends MainGui {
 
         //Group Layout
         {
-            JSeparator sep = new JSeparator();
-
             AES_CONTENT.removeAll();
             GroupLayout main = new GroupLayout(AES_CONTENT);
             AES_CONTENT.setLayout(main);
@@ -1021,8 +807,6 @@ public class ProgramMainGui extends MainGui {
                     main.createSequentialGroup().addGroup(
                             main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
                                     a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                            ).addComponent(
-                                    sep
                             ).addComponent(
                                     AES_IN, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                             ).addGroup(
@@ -1065,9 +849,7 @@ public class ProgramMainGui extends MainGui {
             main.setVerticalGroup(
                     main.createSequentialGroup().addComponent(
                             a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                    ).addGap(DendroFactory.SMALL_GAP).addComponent(
-                            sep
-                    ).addGap(DendroFactory.SMALL_GAP).addComponent(
+                    ).addGap(DendroFactory.LARGE_GAP).addComponent(
                             AES_IN, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                     ).addGap(DendroFactory.MEDIUM_GAP).addGroup(
                             main.createParallelGroup(GroupLayout.Alignment.CENTER).addComponent(
@@ -1132,8 +914,6 @@ public class ProgramMainGui extends MainGui {
 
         //Group Layout
         {
-            JSeparator sep = new JSeparator();
-
             AES_CONTENT.removeAll();
             GroupLayout main = new GroupLayout(AES_CONTENT);
             AES_CONTENT.setLayout(main);
@@ -1141,8 +921,6 @@ public class ProgramMainGui extends MainGui {
                     main.createSequentialGroup().addGroup(
                             main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
                                     a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                            ).addComponent(
-                                    sep
                             ).addComponent(
                                     AES_IN, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                             ).addGroup(
@@ -1183,9 +961,7 @@ public class ProgramMainGui extends MainGui {
             main.setVerticalGroup(
                     main.createSequentialGroup().addComponent(
                             a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                    ).addGap(DendroFactory.SMALL_GAP).addComponent(
-                            sep
-                    ).addGap(DendroFactory.SMALL_GAP).addComponent(
+                    ).addGap(DendroFactory.LARGE_GAP).addComponent(
                             AES_IN, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                     ).addGap(DendroFactory.MEDIUM_GAP).addGroup(
                             main.createParallelGroup(GroupLayout.Alignment.CENTER).addComponent(
@@ -1239,8 +1015,6 @@ public class ProgramMainGui extends MainGui {
 
         //Group Layout
         {
-            JSeparator sep = new JSeparator();
-
             AES_CONTENT.removeAll();
             GroupLayout main = new GroupLayout(AES_CONTENT);
             AES_CONTENT.setLayout(main);
@@ -1248,8 +1022,6 @@ public class ProgramMainGui extends MainGui {
                     main.createSequentialGroup().addGroup(
                             main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
                                     a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                            ).addComponent(
-                                    sep
                             ).addComponent(
                                     AES_IN, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                             ).addComponent(
@@ -1286,9 +1058,7 @@ public class ProgramMainGui extends MainGui {
             main.setVerticalGroup(
                     main.createSequentialGroup().addComponent(
                             a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                    ).addGap(DendroFactory.SMALL_GAP).addComponent(
-                            sep
-                    ).addGap(DendroFactory.SMALL_GAP).addComponent(
+                    ).addGap(DendroFactory.LARGE_GAP).addComponent(
                             AES_IN, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                     ).addGap(DendroFactory.MEDIUM_GAP).addComponent(
                             AES_KEY, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
@@ -1347,8 +1117,6 @@ public class ProgramMainGui extends MainGui {
 
         //Group Layout
         {
-            JSeparator sep = new JSeparator();
-
             AES_CONTENT.removeAll();
             GroupLayout main = new GroupLayout(AES_CONTENT);
             AES_CONTENT.setLayout(main);
@@ -1356,8 +1124,6 @@ public class ProgramMainGui extends MainGui {
                     main.createSequentialGroup().addGroup(
                             main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
                                     a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                            ).addComponent(
-                                    sep
                             ).addComponent(
                                     AES_IN, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                             ).addGroup(
@@ -1396,9 +1162,7 @@ public class ProgramMainGui extends MainGui {
             main.setVerticalGroup(
                     main.createSequentialGroup().addComponent(
                             a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                    ).addGap(DendroFactory.SMALL_GAP).addComponent(
-                            sep
-                    ).addGap(DendroFactory.SMALL_GAP).addComponent(
+                    ).addGap(DendroFactory.LARGE_GAP).addComponent(
                             AES_IN, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                     ).addGap(DendroFactory.MEDIUM_GAP).addGroup(
                             main.createParallelGroup(GroupLayout.Alignment.CENTER).addComponent(
@@ -1450,8 +1214,6 @@ public class ProgramMainGui extends MainGui {
 
         //Group Layout
         {
-            JSeparator sep = new JSeparator();
-
             AES_CONTENT.removeAll();
             GroupLayout main = new GroupLayout(AES_CONTENT);
             AES_CONTENT.setLayout(main);
@@ -1459,8 +1221,6 @@ public class ProgramMainGui extends MainGui {
                     main.createSequentialGroup().addGroup(
                             main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
                                     a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                            ).addComponent(
-                                    sep
                             ).addComponent(
                                     AES_IN, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                             ).addComponent(
@@ -1495,9 +1255,7 @@ public class ProgramMainGui extends MainGui {
             main.setVerticalGroup(
                     main.createSequentialGroup().addComponent(
                             a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
-                    ).addGap(DendroFactory.SMALL_GAP).addComponent(
-                            sep
-                    ).addGap(DendroFactory.SMALL_GAP).addComponent(
+                    ).addGap(DendroFactory.LARGE_GAP).addComponent(
                             AES_IN, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
                     ).addGap(DendroFactory.MEDIUM_GAP).addComponent(
                             AES_KEY, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
@@ -1524,6 +1282,460 @@ public class ProgramMainGui extends MainGui {
                     )
             );
         }
+    }
+
+    private void setEcDSA() {
+        JLabel a = new JLabel("message");
+        JLabel b = new JLabel("Private Key");
+        JLabel c = new JLabel("Public Key (X)");
+        JLabel d = new JLabel("Public Key (Y)");
+        JLabel e = new JLabel("Signature (R)");
+        JLabel f = new JLabel("Signature (S)");
+
+        JButton sign = DendroFactory.getButton("Sign");
+        sign.addActionListener(event -> {
+            BigInteger priv = fromRadixInput(ECC_Z, ECC_RADIX);
+            if (priv != null) {
+                try {
+                    Signature sig = Registry.get((String) ECC_DC.getSelectedItem()).sign(
+                            ECC_M.getText().getBytes(DendroCrypto.CHARSET),
+                            priv
+                    );
+                    toRadixOutput(ECC_R, ECC_RADIX, sig.R);
+                    toRadixOutput(ECC_S, ECC_RADIX, sig.S);
+                } catch (NoSuchAlgorithmException ex) {
+                    CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Your system does not support SHA-256");
+                    new AlertGui(this, "Your system does not support SHA-256", CURRENT_INSTANCE).setVisible(true);
+                }
+            }
+        });
+        JButton verify = DendroFactory.getButton("Verify");
+        verify.addActionListener(event -> {
+            BigInteger x = fromRadixInput(ECC_X, ECC_RADIX),
+                    y = fromRadixInput(ECC_Y, ECC_RADIX),
+                    r = fromRadixInput(ECC_R, ECC_RADIX),
+                    s = fromRadixInput(ECC_S, ECC_RADIX);
+            if(x != null && y != null && r != null && s != null) {
+                DefinedCurve curve = Registry.get((String) ECC_DC.getSelectedItem());
+                ECPoint pub = makeECPoint(x, y, curve);
+                if (pub != null) {
+                    try {
+                        boolean cor = curve.verifySignature(
+                                ECC_M.getText().getBytes(DendroCrypto.CHARSET),
+                                new Signature(r, s),
+                                pub
+                        );
+                        new AlertGui(this, "Signature " + (cor ? "is Valid" : "is not Valid"), CURRENT_INSTANCE).setVisible(true);
+                    } catch (NoSuchAlgorithmException ex) {
+                        CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Your system does not support SHA-256");
+                        new AlertGui(this, "Your system does not support SHA-256", CURRENT_INSTANCE).setVisible(true);
+                    }
+                }
+            }
+        });
+        JButton gen = DendroFactory.getButton("Generate Keypair");
+        gen.addActionListener(event -> {
+            ECCKeyPair pair = Registry.get((String) ECC_DC.getSelectedItem()).generateKeyPair();
+            toRadixOutput(ECC_X, ECC_RADIX, pair.PUBLIC.X);
+            toRadixOutput(ECC_Y, ECC_RADIX, pair.PUBLIC.Y);
+            toRadixOutput(ECC_Z, ECC_RADIX, pair.PRIVATE);
+        });
+
+        //Group Layout
+        {
+            ECC_CONTENT.removeAll();
+            GroupLayout main = new GroupLayout(ECC_CONTENT);
+            ECC_CONTENT.setLayout(main);
+            main.setHorizontalGroup(
+                    main.createParallelGroup(GroupLayout.Alignment.CENTER).addGroup(
+                            main.createSequentialGroup().addGroup(
+                                    main.createParallelGroup(GroupLayout.Alignment.TRAILING).addComponent(
+                                            a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            b, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            c, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            d, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            e, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            f, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    )
+                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                            ECC_M_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                    ).addComponent(
+                                            ECC_Z_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                    ).addComponent(
+                                            ECC_X_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                    ).addComponent(
+                                            ECC_Y_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                    ).addComponent(
+                                            ECC_R_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                    ).addComponent(
+                                            ECC_S_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                    )
+                            )
+                    ).addGroup(
+                            main.createSequentialGroup().addComponent(
+                                    gen, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addGap(
+                                    DendroFactory.SMALL_GAP, DendroFactory.SMALL_GAP, Short.MAX_VALUE
+                            ).addComponent(
+                                    sign, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addGap(
+                                    DendroFactory.SMALL_GAP, DendroFactory.SMALL_GAP, Short.MAX_VALUE
+                            ).addComponent(
+                                    verify, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    )
+            );
+            main.setVerticalGroup(
+                    main.createSequentialGroup().addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                    a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    ECC_M_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                            )
+                    ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                    b, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    ECC_Z_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                    c, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    ECC_X_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                    d, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    ECC_Y_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                    e, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    ECC_R_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                    f, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    ECC_S_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    ).addGap(DendroFactory.MEDIUM_GAP).addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.CENTER).addComponent(
+                                    gen, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    sign, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    verify, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    )
+            );
+        }
+    }
+
+    private void setEcDH() {
+        JLabel a = new JLabel("Starting Point (X)");
+        JLabel b = new JLabel("Starting Point (Y)");
+        JLabel c = new JLabel("Multiplicand");
+        JLabel d = new JLabel("Result (X)");
+        JLabel e = new JLabel("Result (Y)");
+
+        JButton multiply = DendroFactory.getButton("Multiply");
+        multiply.addActionListener(event -> {
+            BigInteger x = fromRadixInput(ECC_X, ECC_RADIX),
+                    y = fromRadixInput(ECC_Y, ECC_RADIX),
+                    z = fromRadixInput(ECC_Z, ECC_RADIX);
+
+            if(x != null && y != null && z != null) {
+                ECPoint start = makeECPoint(x, y, Registry.get((String) ECC_DC.getSelectedItem()));
+                if(start != null) {
+                    ECPoint end = start.multiply(z);
+                    if(end == null) {
+                        ECC_X2.setText("POINT AT INFINITY");
+                        ECC_Y2.setText("POINT AT INFINITY");
+                    } else {
+                        toRadixOutput(ECC_X2, ECC_RADIX, end.X);
+                        toRadixOutput(ECC_Y2, ECC_RADIX, end.Y);
+                    }
+                }
+            }
+        });
+        JButton useG = DendroFactory.getButton("Use Generator");
+        useG.addActionListener(event -> {
+            DefinedCurve curve = Registry.get((String) ECC_DC.getSelectedItem());
+            toRadixOutput(ECC_X, ECC_RADIX, curve.G.X);
+            toRadixOutput(ECC_Y, ECC_RADIX, curve.G.Y);
+        });
+
+        //Group Layout
+        {
+            ECC_CONTENT.removeAll();
+            GroupLayout main = new GroupLayout(ECC_CONTENT);
+            ECC_CONTENT.setLayout(main);
+            main.setHorizontalGroup(
+                    main.createParallelGroup(GroupLayout.Alignment.CENTER).addGroup(
+                            main.createSequentialGroup().addGroup(
+                                    main.createParallelGroup(GroupLayout.Alignment.TRAILING).addComponent(
+                                            a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            b, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            c, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            d, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            e, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    )
+                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                                    main.createParallelGroup(GroupLayout.Alignment.TRAILING).addComponent(
+                                            ECC_X_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                    ).addComponent(
+                                            ECC_Y_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                    ).addComponent(
+                                            ECC_Z_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                    ).addComponent(
+                                            ECC_X2_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                    ).addComponent(
+                                            ECC_Y2_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                    )
+                            )
+                    ).addGroup(
+                            main.createSequentialGroup().addComponent(
+                                    multiply, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addGap(
+                                    DendroFactory.SMALL_GAP, DendroFactory.SMALL_GAP, Short.MAX_VALUE
+                            ).addComponent(
+                                    useG, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    )
+            );
+            main.setVerticalGroup(
+                    main.createSequentialGroup().addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                    a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    ECC_X_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                    b, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    ECC_Y_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                    c, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    ECC_Z_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                    d, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    ECC_X2_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                    e, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    ECC_Y2_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    ).addGap(DendroFactory.MEDIUM_GAP).addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.CENTER).addComponent(
+                                    multiply, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    useG, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    )
+            );
+        }
+    }
+
+    private void setEcPack() {
+        JLabel a = new JLabel("Packed");
+        JLabel b = new JLabel("Unpacked (X)");
+        JLabel c = new JLabel("Unpacked (Y)");
+
+        JButton unpack = DendroFactory.getButton("Unpack");
+        unpack.addActionListener(event -> {
+            BigInteger packed = fromRadixInput(ECC_P, ECC_RADIX);
+            if(packed != null) {
+                DefinedCurve curve = Registry.get((String) ECC_DC.getSelectedItem());
+                try {
+                    BigInteger[] coordinates = curve.getPackingHandler().unpack(packed, curve.E);
+                    toRadixOutput(ECC_X, ECC_RADIX, coordinates[0]);
+                    toRadixOutput(ECC_Y, ECC_RADIX, coordinates[1]);
+                } catch (NullPointerException ex) {
+                    CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "This is not a valid packed public key");
+                    ECC_P.setBackground(DendroFactory.WRONG);
+                }
+            }
+        });
+        JButton pack = DendroFactory.getButton("Pack");
+        pack.addActionListener(event -> {
+            BigInteger x = fromRadixInput(ECC_X, ECC_RADIX),
+                    y = fromRadixInput(ECC_Y, ECC_RADIX);
+            if(x != null && y != null) {
+                DefinedCurve curve = Registry.get((String) ECC_DC.getSelectedItem());
+                toRadixOutput(ECC_P, ECC_RADIX, curve.getPackingHandler().pack(makeECPoint(x, y, curve)));
+            }
+        });
+
+        //Group Layout
+        {
+            ECC_CONTENT.removeAll();
+            GroupLayout main = new GroupLayout(ECC_CONTENT);
+            ECC_CONTENT.setLayout(main);
+            main.setHorizontalGroup(
+                    main.createParallelGroup(GroupLayout.Alignment.CENTER).addGroup(
+                            main.createSequentialGroup().addGroup(
+                                    main.createParallelGroup(GroupLayout.Alignment.TRAILING).addComponent(
+                                            a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            b, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    ).addComponent(
+                                            c, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                                    )
+                            ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                                    main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                            ECC_P_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                    ).addComponent(
+                                            ECC_X_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                    ).addComponent(
+                                            ECC_Y_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE
+                                    )
+                            )
+                    ).addGroup(
+                            main.createSequentialGroup().addComponent(
+                                    unpack, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addGap(
+                                    DendroFactory.SMALL_GAP, DendroFactory.SMALL_GAP, Short.MAX_VALUE
+                            ).addComponent(
+                                    pack, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    )
+            );
+            main.setVerticalGroup(
+                    main.createSequentialGroup().addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                    a, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    ECC_P_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                    b, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    ECC_X_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    ).addGap(DendroFactory.SMALL_GAP).addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(
+                                    c, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    ECC_Y_SCROLL, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    ).addGap(DendroFactory.MEDIUM_GAP).addGroup(
+                            main.createParallelGroup(GroupLayout.Alignment.CENTER).addComponent(
+                                    unpack, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            ).addComponent(
+                                    pack, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE
+                            )
+                    )
+            );
+        }
+    }
+
+    private void setEccDefCrv() {
+        switch ((String) ECC_FORM.getSelectedItem()) {
+            case "Weierstrass Prime" -> {
+                ECC_DC.removeAllItems();
+                for (String curve : DendroCrypto.WEIERSTRASS_PRIME) {
+                    ECC_DC.addItem(curve);
+                }
+            }
+            case "Weierstrass Binary" -> {
+                ECC_DC.removeAllItems();
+                for (String curve : DendroCrypto.WEIERSTRASS_BINARY) {
+                    ECC_DC.addItem(curve);
+                }
+            }
+            case "Twisted Edwards" -> {
+                ECC_DC.removeAllItems();
+                for (String curve : DendroCrypto.TWISTED_EDWARDS) {
+                    ECC_DC.addItem(curve);
+                }
+            }
+            case "Montgomery" -> {
+                ECC_DC.removeAllItems();
+                for (String curve : DendroCrypto.MONTGOMERY) {
+                    ECC_DC.addItem(curve);
+                }
+            }
+            case "Edwards" -> {
+                ECC_DC.removeAllItems();
+                for (String curve : DendroCrypto.EDWARDS) {
+                    ECC_DC.addItem(curve);
+                }
+            }
+        }
+    }
+
+    private BigInteger fromRadixInput(JTextArea input, JComboBox<String> radix) {
+        BigInteger out = null;
+        try {
+            String raw = Validation.validateString(input);
+            switch ((String) radix.getSelectedItem()) {
+                case "Base64" -> out = new BigInteger(Base64.getDecoder().decode(raw));
+                case "Hexadecimal" -> out = new BigInteger(raw, 16);
+                case "Decimal" -> out = new BigInteger(raw);
+            }
+        } catch (ValidationFailedException ex) {
+            CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Private Key must be a number matching the radix");
+        } catch (IllegalArgumentException ex) {
+            CURRENT_INSTANCE.LOG_HANDLER.error(getClass(), "Private Key must be a number matching the radix");
+            input.setBackground(DendroFactory.WRONG);
+        }
+        return out;
+    }
+
+    private void toRadixOutput(JTextArea target, JComboBox<String> radix, BigInteger input) {
+        String text = "";
+        switch ((String) radix.getSelectedItem()) {
+            case "Base64" -> {
+                text = Base64.getEncoder().encodeToString(input.toByteArray());
+            }
+            case "Hexadecimal" -> {
+                text = input.toString(16);
+            }
+            case "Decimal" -> {
+                text = input.toString();
+            }
+        }
+        target.setText(text);
+    }
+
+    private ECPoint makeECPoint(BigInteger x, BigInteger y, DefinedCurve curve) {
+        ECPoint out = null;
+        if (curve.E instanceof WeierstrassPrime) {
+            out = new WpECPoint(x, y, (WeierstrassPrime) curve.E);
+        } else if (curve.E instanceof WeierstrassBinary) {
+            out = new WbECPoint(x, y, (WeierstrassBinary) curve.E);
+        } else if (curve.E instanceof TwistedEdwards) {
+            out = new TeECPoint(x, y, (TwistedEdwards) curve.E);
+        } else if (curve.E instanceof Montgomery) {
+            out = new MECPoint(x, y, (Montgomery) curve.E);
+        } else if (curve.E instanceof Edwards) {
+            out = new EdECPoint(x, y, (Edwards) curve.E);
+        }
+        return out;
     }
 
     @Override

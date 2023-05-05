@@ -9,8 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b24a71ca-022e-4d4f-81a2-a17d43395b76" name="Changes" comment="fixed visuals, updated documentation">
+    <list default="true" id="b24a71ca-022e-4d4f-81a2-a17d43395b76" name="Changes" comment="added ModExp tab">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/ProgramMainGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/donny/dendrocrypto/gui/ProgramMainGui.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683254875947</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added ModExp tab">
+      <created>1683260080639</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683260080639</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,6 +170,7 @@
     <MESSAGE value="add defiend curves" />
     <MESSAGE value="ensured that logs won't sync" />
     <MESSAGE value="fixed visuals, updated documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed visuals, updated documentation" />
+    <MESSAGE value="added ModExp tab" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ModExp tab" />
   </component>
 </project>
